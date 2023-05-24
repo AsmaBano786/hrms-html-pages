@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Designation Details</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+    <link rel="stylesheet" href="dist/css/admin.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <div class="preloader">
+        <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+      </div>
+      <!-- start header code here............... -->
+      <div hrms-include-html="includes/header.html"></div>
+      <!-- end header code here............... -->
+      <!-- start leftpanel code here............... -->
+      <div hrms-include-html="includes/left-panel.html"></div>
+      <!-- end leftpanel code here............... -->
+      <div class="content-wrapper">
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-12">
+                <h1 class="m-0">Designation Details</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <div class="active tab-pane" id="info">
+            <div class="card card-default">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-md-2 pl-3">
+                    <label for="">Designation Name <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="" id="" class="form-control">
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-2 pl-3">
+                    <label for="">Mail Alias <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="" id="" class="form-control">
+                  </div>
+                </div>
+                <br>
+                <button class="btn btn-primary mb-1" onclick="location.href='Department.html';">Submit</button>
+                <button class="btn border ml-2 mb-1" onclick="stepper.next()" required>Submit and New</button>
+                <button class="btn border ml-2 mb-1" onclick="stepper.next()">Cancel</button>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          <!-- start footer code here............... -->
+          <div hrms-include-html="includes/footer.html"></div>
+          <!-- end footer code here............... -->
+        </div>
+        <script src="dist/js/hrms.js"></script>
+        <script src="dist/js/script.js"></script>
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script>
+          $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="dist/js/admin.js"></script>
+        <script src="dist/js/demo.js"></script>
+        <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+        <!--<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>-->
+        <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+        <!--  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>-->
+        <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+        <!--  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>-->
+        <script src="plugins/jszip/jszip.min.js"></script>
+        <script src="plugins/pdfmake/pdfmake.min.js"></script>
+        <script src="plugins/pdfmake/vfs_fonts.js"></script>
+        <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+        <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+        <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+        <script>
+          $(function() {
+            $("#example1").DataTable({
+              "responsive": true,
+              "lengthChange": false,
+              "autoWidth": false,
+              "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+              "paging": true,
+              "lengthChange": false,
+              "searching": false,
+              "ordering": true,
+              "info": true,
+              "autoWidth": false,
+              "responsive": true,
+            });
+          });
+        </script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leave Tracker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css" />
+    <link rel="stylesheet" href="dist/css/admin.min.css" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <div class="preloader">
+        <img class="animation__shake" src="dist/img/logo.png" alt="Logo" />
+      </div>
+     
+      <!-- start header code here............... -->
+      <div hrms-include-html="includes/header.html"></div>
+      <!-- end header code here............... -->
+      <!-- start leftpanel code here............... -->
+      <div hrms-include-html="includes/left-panel.html"></div>
+      <!-- end leftpanel code here............... -->
+      <div class="content-wrapper">
+        <div class="content-header">
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <h1 class="m-0">Document Management</h1>
+            </div>
+          </div>
+         
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="col-md-12">
+                  <div class="card-header">
+                  <h5> Document Management</h5> 
+                  </div>
+                </div>
+                    <div class="row ">
+                     
+                      <div class="col-md-12 p-3">
+                        <div class="row ">
+                            <div class="col-md-3 ">
+                                <select class="custom-select" id="inlineFormCustomSelect" onchange="location = this.options[this.selectedIndex].value;">
+                                  <option selected="">All Document Name</option>
+                                  <option value="">Aadhar card</option>
+                                  <option value="">Pan Card</option>
+                                  <option value="">Exp Letter</option>
+                                  <option value="">Voter Id</option>
+                                  <option value="">Other</option>
+                                </select>
+                              </div>
+                              <div class="col-md-3">
+                                <select class="custom-select" id="inlineFormCustomSelect" onchange="location = this.options[this.selectedIndex].value;">
+                                  <option selected="">All Module Name</option>
+                                  <option value="">Onboarding</option>
+                                  <option value="">Preonboarding</option>
+                                  <option value="">HR</option>
+                                  <option value="">Other</option>
+                                 
+                                </select>
+                              </div>
+                              <div class="col-md-6 ">
+                                <a href="Add_documemnt.html" class="btn btn-primary">Search</a>
+                              </div>
+                             
+                             <!-- <div class="col-md-4">
+                                
+                                    
+                                        <a class="nav-link navbar-search_new " data-widget="navbar-search" href="#" role="button">
+                                            <i class="fas fa-search p-1"></i>
+                                          </a>
+                                          
+                                        
+                                        <div class="navbar-search-block">
+                                            <form class="form-inline">
+                                              <div class="input-group input-group-sm">
+                                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                                                <div class="input-group-append">
+                                                  <button class="btn btn-navbar" type="submit">
+                                                    <i class="fas fa-search"></i>
+                                                  </button>
+                                                  
+                                                </div>
+                                              </div>
+                                    
+                                    
+                                              
+                                            </form>
+                                          </div>
+                                
+                             </div> -->
+                        </div>
+                      </div>
+                      <div class="col-md-2 show p-3">
+                        <h6>Show (50/100/All)</h6>
+                      </div>
+                     
+                      <div class="col-md-10 text-right p-3">
+                        <a href="Add_documemnt.html" class="btn btn-primary">+ Add</a>
+                      </div>
+                   
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <th>Document Type</th>
+                          <th>Document Name</th>
+                          <th>File Format</th>
+                          <th>Modules</th>
+                          <th>File Size(MB)</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Address proof</td>
+                          <td>
+                            Aadhar Card
+                          </td>
+                          <td>JPEG,PDF,Doc</td>
+                          <td>Preonboarding , HR, </td>
+                          <td>100MB
+                          </td>
+                          <td>
+                          <a href="Add_documemnt.html">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                        <a href="Add_documemnt.html"> 
+                            <i class="fas fa-trash"></i>
+                        </a></td>
+                        </tr>
+                        <tr>
+                          <td>Company Document</td>
+                      
+                        
+                          <td>
+                            Pan card
+                          </td>
+                          <td>PDF,Doc</td>
+                          <td>Preonboarding , HR,</td>
+                          <td>250MB
+                          </td>
+                          <td><a href="Add_documemnt.html">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                        <a href="Add_documemnt.html"> 
+                            <i class="fas fa-trash"></i>
+                        </a></td>
+                        </tr>
+                      </tbody>
+                      
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <!-- /.col -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- start footer code here............... -->
+      <div hrms-include-html="includes/footer.html"></div>
+      <!-- end footer code here............... -->
+    </div>
+    <script src="dist/js/hrms.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+      $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/admin.js"></script>
+    <script src="dist/js/demo.js"></script>
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <!--<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <!--  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <!--  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>-->
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script>
+      var expanded = false;
+
+      function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+          checkboxes.style.display = "block";
+          expanded = true;
+        } else {
+          checkboxes.style.display = "none";
+          expanded = false;
+        }
+      }
+    </script>
+    <script>
+      $(function() {
+        $("#example1").DataTable({
+          responsive: true,
+          lengthChange: false,
+          autoWidth: false,
+          buttons: ["copy", "csv", "excel", "pdf", "print", "colvis"],
+        }).buttons().container().appendTo("#example1_wrapper .col-md-6:eq(0)");
+        $("#example2").DataTable({
+          paging: true,
+          lengthChange: false,
+          searching: false,
+          ordering: true,
+          info: true,
+          autoWidth: false,
+          responsive: true,
+        });
+      });
+    </script>
+  </body>
+</html>

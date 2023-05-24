@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>organization-tree</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+  <link rel="stylesheet" href="dist/css/admin.min.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <div class="preloader">
+      <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+    </div>
+    <!-- start header code here............... -->
+    <div hrms-include-html="includes/header.html"></div>
+    <!-- end header code here............... -->
+    <!-- start leftpanel code here............... -->
+    <div hrms-include-html="includes/left-panel.html"></div>
+    <!-- end leftpanel code here............... -->
+    <div class="content-wrapper">
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-12">
+                <h1 class="m-0">Organization-tree</h1>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </head>
+
+
+
+      <body>
+        <section class="content">
+          <div class="container-fluid">
+            <div class="card">
+              <ul class="nav nav-pills my-2" id="pills-tab" role="tablist">
+               
+               
+                <a class="nav-link " href="employeeview.html" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Employee
+                  </a>
+                
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="employeeview.html">Employee View</a></li>
+                    <li><a class="dropdown-item" href="emloyeeitractive.html">intractive Employee View</a></li>
+                   
+                  </ul>
+                 
+                   <a class="nav-link " href="/HRMS-HR/Directory.html" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      Directory
+                      </a> 
+                  
+              </ul>
+            </div>
+          </div>
+        </section>
+        <hr>
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+              <div class="tab-content">
+                <div class="active tab-pane" id="info">
+                  <div class="row">
+                    <div class="container ">
+                      <div class="row row1">
+                        <div class="col-md-3 col-sm-6">
+                          <label>Photo :</label>
+                          <input type="file" placeholder="photo" class="form-control"><br><br>
+                          <label>EmployeeID :</label>
+                          <input type="text" placeholder="118" class="form-control"><br><br>
+                          <label>First Name :</label>
+                          <input type="text" placeholder="First name"class="form-control" ><br><br>
+                          <label>Last Name:</label>
+                          <input type="text" placeholder="Last Name"class="form-control"><br><br>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                          <label>Email Id :</label>
+                          <input type="email" placeholder="abc@gmail.com"class="form-control"><br><br>
+                          <label>Department :</label>
+                          <input type="text" placeholder="IT"class="form-control"><br><br>
+                          <label>Title :</label>
+                          <input type="text" placeholder="Title"class="form-control"><br><br>
+                          <label>Date of joining :</label>
+                          <input type="date" placeholder="Date of joining"class="form-control"><br><br>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                          <label>Work location :</label>
+                          <input type="text" placeholder="Location"class="form-control"><br><br>
+                          <label>Work phone :</label>
+                          <input type="text" placeholder="phone number"class="form-control"><br><br>
+                          <label>Extention :</label>
+                          <input type="text" placeholder="Extention"class="form-control"><br><br>
+                          <label>Other email :</label>
+                          <input type="email" placeholder="email"class="form-control"><br><br>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                          <label>Reporting to :</label>
+                          <input type="text"class="form-control"><br><br>
+                          <label>Birth date:</label><br>
+                          <input type="date" placeholder="Date"class="form-control"><br><br>
+                          <label>Mobile Phone :</label>
+                          <input type="text" placeholder="Mobile"class="form-control"><br><br>
+                          <label>Address :</label>
+                          <input type="email" placeholder="Address"class="form-control"><br><br>
+                        </div>
+
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div><hr>
+              <div class="col-md-12 text-right ">
+                <a href="/HRMS-HR/Directory.html" class="btn btn-primary">+ Add Details</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+
+        <!-- start footer code here............... -->
+        <!-- <div hrms-include-html="includes/footer.html"></div> -->
+        <!-- end footer code here............... -->
+    </div>
+    <script src="dist/js/hrms.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+      $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/admin.js"></script>
+    <script src="dist/js/demo.js"></script>
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <!--<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <!--  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <!--  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>-->
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script>
+      var expanded = false;
+
+      function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+          checkboxes.style.display = "block";
+          expanded = true;
+        } else {
+          checkboxes.style.display = "none";
+          expanded = false;
+        }
+      }
+    </script>
+    <script>
+      $(function () {
+        $("#example1").DataTable({
+          "responsive": true,
+          "lengthChange": false,
+          "autoWidth": false,
+          "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": true,
+          "autoWidth": false,
+          "responsive": true,
+        });
+      });
+    </script>
+    <script>
+      var toggler = document.getElementsByClassName("caret");
+      var i;
+      for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function () {
+          this.parentElement.querySelector(".nested").classList.toggle("active");
+          this.classList.toggle("caret-down");
+        });
+      }
+    </script>
+</body>
+
+</html>

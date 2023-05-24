@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calender-setting-for-all-location</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+    <link rel="stylesheet" href="dist/css/admin.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <div class="preloader">
+        <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+      </div>
+      <!-- start header code here............... -->
+      <div hrms-include-html="includes/header.html"></div>
+      <!-- end header code here............... -->
+      <!-- start leftpanel code here............... -->
+      <div hrms-include-html="includes/left-panel.html"></div>
+      <!-- end leftpanel code here............... -->
+      <div class="content-wrapper">
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-12">
+                <h1 class="m-0">Calendar Setting</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="content">
+          <div class="container-fluid">
+            <div class="card">
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="active tab-pane" id="info">
+                    <h3 class="card-title col-md-3">Calendar Setting For location</h3>
+                    <select class="col-md-3 form-control">
+                      <option value="">Bruges</option>
+                      <option value="">Busan</option>
+                      <option value="">Kurduvadi</option>
+                      <option value="">Mumbai</option>
+                      <option value="">New York</option>
+                      <option value="">Sacramento</option>
+                      <option value="">All Loctaions</option>
+                      </span>
+                    </select>
+                    <h5 class="mt-3 pt-3 border-top">
+                      <strong>Week Definition</strong>
+                    </h5>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <label for="">Work week starts on <span class="text-danger">*</span>
+                          </label>
+                          <select class="form-control ">
+                            <option>Sunday</option>
+                            <option>Monday</option>
+                            <option>Tuesday</option>
+                            <option>Wednesday</option>
+                            <option>Thursday</option>
+                            <option>Friday</option>
+                            <option>Saturday</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="">Work week starts on <span class="text-danger">*</span>
+                          </label>
+                          <select class="form-control ">
+                            <option>Sunday</option>
+                            <option>Monday</option>
+                            <option>Tuesday</option>
+                            <option>Wednesday</option>
+                            <option>Thursday</option>
+                            <option>Friday</option>
+                            <option>Saturday</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="">Work week End on <span class="text-danger">*</span>
+                          </label>
+                          <select class="form-control ">
+                            <option>Sunday</option>
+                            <option>Monday</option>
+                            <option>Tuesday</option>
+                            <option>Wednesday</option>
+                            <option>Thursday</option>
+                            <option>Friday</option>
+                            <option>Saturday</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6"></div>
+                        <div class="row card-header">
+                          <h5 class="header">
+                            <strong>Weekend Definition</strong>
+                          </h5>
+                        </div>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Day</th>
+                              <th>all</th>
+                              <th>1st</th>
+                              <th>2nd</th>
+                              <th>3rd</th>
+                              <th>4th</th>
+                              <th>5th</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Sunday</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Monday</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Tuesday</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Wednesday</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Thursday</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Friday</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Saturday</td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="content-header">
+                      <div class="container-fluid">
+                        <div class="row mb-2">
+                          <div class="col-sm-12">
+                            <h5 class="m-0">
+                              <strong>Calendar Year</strong>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1 pl-5">
+                        <input type="radio">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="">Current year (January to December)</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1 pl-5">
+                        <input type="radio">
+                      </div>
+                      <div class="col-md-2">
+                        <label for="">The year starts from</label>
+                      </div>
+                      <div class="col-md-2">
+                        <input type="date" class="form-control">
+                      </div>
+                      <div class="col-md-1">
+                        <label for=""> End on</label>
+                      </div>
+                      <div class="col-md-2 ">
+                        <input type="date" class="form-control">
+                      </div>
+                    </div>
+                    <div class="content-header">
+                      <div class="container-fluid">
+                        <div class="row mb-2">
+                          <div class="col-sm-12">
+                            <h5 class="m-0">
+                              <strong>Statutory Weekend</strong>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <label class="pl-5">Statutory Weekend <span class="text-danger">*</span>
+                      </label>
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-6">
+                      <label>
+                        <input type="checkbox" class="m-0" id=""> Define statutory weekends and track statutory weekend hours separately. </label>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="form-group col-md-2 pl-5">
+                      <a href="" class="btn btn-primary btn-block">Submit</a>
+                    </div>
+                    <div class="form-group col-md-2">
+                      <a href="" class="btn border btn-block">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- start footer code here............... -->
+      <div hrms-include-html="includes/footer.html"></div>
+      <!-- end footer code here............... -->
+    </div>
+    <script src="dist/js/hrms.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+      $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/admin.js"></script>
+    <script src="dist/js/demo.js"></script>
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <!--<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <!--  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <!--  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>-->
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script>
+      $(function() {
+        $("#example1").DataTable({
+          "responsive": true,
+          "lengthChange": false,
+          "autoWidth": false,
+          "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": true,
+          "autoWidth": false,
+          "responsive": true,
+        });
+      });
+    </script>
+    <script>
+      // Listen for click on toggle checkbox
+      $('#selectfirstRow').click(function(event) {
+        if (this.checked) {
+          // Iterate each checkbox
+          $('.checkboxRow1').each(function() {
+            this.checked = true;
+          });
+        } else {
+          $('.checkboxRow1').each(function() {
+            this.checked = false;
+          });
+        }
+      });
+      $('#selectsecondRow').click(function(event) {
+        if (this.checked) {
+          // Iterate each checkbox
+          $('.checkboxRow2').each(function() {
+            this.checked = true;
+          });
+        } else {
+          $('.checkboxRow2').each(function() {
+            this.checked = false;
+          });
+        }
+      });
+      $('#selectthirdRow').click(function(event) {
+        if (this.checked) {
+          // Iterate each checkbox
+          $('.checkboxRow3').each(function() {
+            this.checked = true;
+          });
+        } else {
+          $('.checkboxRow3').each(function() {
+            this.checked = false;
+          });
+        }
+      });
+      $('#selectforthRow').click(function(event) {
+        if (this.checked) {
+          // Iterate each checkbox
+          $('.checkboxRow4').each(function() {
+            this.checked = true;
+          });
+        } else {
+          $('.checkboxRow4').each(function() {
+            this.checked = false;
+          });
+        }
+      });
+      $('#selectfifthRow').click(function(event) {
+        if (this.checked) {
+          // Iterate each checkbox
+          $('.checkboxRow5').each(function() {
+            this.checked = true;
+          });
+        } else {
+          $('.checkboxRow5').each(function() {
+            this.checked = false;
+          });
+        }
+      });
+      $('#selectsixRow').click(function(event) {
+        if (this.checked) {
+          // Iterate each checkbox
+          $('.checkboxRow6').each(function() {
+            this.checked = true;
+          });
+        } else {
+          $('.checkboxRow6').each(function() {
+            this.checked = false;
+          });
+        }
+      });
+      $('#selectsevenRow').click(function(event) {
+        if (this.checked) {
+          // Iterate each checkbox
+          $('.checkboxRow7').each(function() {
+            this.checked = true;
+          });
+        } else {
+          $('.checkboxRow7').each(function() {
+            this.checked = false;
+          });
+        }
+      });
+    </script>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Company Information</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+    <link rel="stylesheet" href="dist/css/admin.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <div class="preloader ">
+        <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+      </div>
+      <!-- start header code here............... -->
+      <div hrms-include-html="includes/header.html"></div>
+      <!-- end header code here............... -->
+      <!-- start leftpanel code here............... -->
+      <div hrms-include-html="includes/left-panel.html"></div>
+      <!-- end leftpanel code here............... -->
+      <div class="content-wrapper">
+      
+        <div class="content-header">
+          
+          
+            <div class="card card-default">
+            <div class="card card-default" >
+              <div class="card-header">
+                <strong> <h3>Company  Details</h3></strong>
+             <h3 class="card-title">
+               
+              </h3>
+              </div>
+            
+              <div class="card-body p-5">
+                 
+                      <div class="col-md-12">
+           <div class="row">
+                <div class="form-group  col-md-6 ">
+                  <label for="">Company Name <span class="" style="color:red;">*</span>
+                  </label>
+                  <input type="text" class="form-control"  id="" placeholder="Company Name">
+                </div>
+               
+                <div class="form-group col-md-6 ">
+                  <label for="">Company Email <span class="" style="color:red;">*</span>
+                  </label>
+                  <input type="email"class="form-control" id="" placeholder="Company Email">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="">Contact No <span class="" style="color:red;">*</span>
+                  </label>
+                  <input type="email"class="form-control"  id="" placeholder="Contact No">
+                </div>
+             
+                <div class="form-group  col-md-6">
+                  <label for="" >Portal Name <span class="" style="color:red;">*</span>
+                  </label>
+                  <input type="url"class="form-control" id="" placeholder="Portal Name ">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="" >Industry <span class="" style="color:red;">*</span>
+                  </label>
+                  <select name="" id="ab" class= "form-select form-control">
+                    <option value="">Select Industry </option>
+                    <option value="">Information Technology</option>
+                    <option value="">Maketing</option>
+                    <option value="">BPO</option>
+                   
+                 
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="" class="">Number of Employee <span class="" style="color:red;">*</span>
+                  </label>
+                  <select name="" id="ab" class="form-select form-control">
+                    <option value="">select here  </option>
+                    <option value="">1-50</option>
+                    <option value="">50-100</option>
+                    <option value="">100-200</option>
+                    <option value="">500-1000</option>
+                 
+                  </select>
+                </div>
+                <div class="form-group  col-md-6">
+                  <label for="" >Tax Information
+                  </label>
+                  <input type="url"class="form-control" id="" placeholder="Tax Information">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="" >Company Logo
+                  </label>
+                  <div class="custom-file">
+                    <input class="custom-file-input" id="customFile" type="file">
+                    <label class="custom-file-label" for="customFile">Upload Company Logo</label>
+                  </div>
+                </div>
+                <!-- <button style="background-color: rgb(84, 84, 224)" >invite user</button> -->
+                <!-- <div class="form-group row">
+                  <label for="" class="col-md-4 "> or sign in using <span class=""><a href="https://www.facebook.com/cylsyssoftwaresolutionpvtltd" target="_blank"><i class="fab fa-facebook social mr-2"></i></a> <a href="https://www.linkedin.com/company/2310187" target="_blank"><i class="fab fa-linkedin-in social mr-2"></i></a>  <a href="https://www.skype.com/pawasgoyal" target="_blank"><i class="fab fa-skype social mr-2"></i></a> </span>
+                  </label>
+                 
+                </div> -->
+              </div>
+          </div><br>
+         
+      </div>
+            </div>
+            <div class="card card-default">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <strong>Address</strong>
+                </h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                
+                  <div class=" col-md-6">
+                    <label for="">Country <span class="text-danger">*</span>
+                    </label>
+                    <select class="form-control select2">
+                      <option selected="selected">Select here</option>
+                      <option>India</option>
+                      <option>California</option>
+                      <option>Delaware</option>
+                      <option>Tennessee</option>
+                      <option>Texas</option>
+                      <option>Washington</option>
+                    </select>
+                  </div>
+                  <div class=" col-md-6">
+                    <label for="">State/Province</label>
+                    <input type="text" class="form-control" id="" placeholder="State/Province">
+                  </div>
+                  <div class=" col-md-6">
+                    <label for="">City <span class="text-danger">*</span>
+                    </label>
+                    <input type="email" class="form-control" id="" placeholder="City">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="">ZIP/PIN Code <span class="text-danger">*</span>
+                    </label>
+                    <input type="number" class="form-control" id="" placeholder="ZIP/PIN Code">
+                  </div>
+               
+                  <div class=" col-md-6">
+                    <label for="">Street Address</label>
+                    <textarea type="text" class="form-control" id="" placeholder="Street Address"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-md-3">
+            
+              <a href="index.html">  <button class="btn btn-primary mb-1" >Submit</button></a>
+              <a href="login.html">  <button class="btn border ml-2 mb-1">Cancel</button></a>
+              </div><br>
+            </div>
+          </div>
+        </div>
+            <!-- start footer code here............... -->
+            <div hrms-include-html="includes/footer.html"></div>
+            <!-- end footer code here............... -->
+            </div>
+            <script src="dist/js/hrms.js"></script>
+            <script src="dist/js/script.js"></script>
+            <script src="plugins/jquery/jquery.min.js"></script>
+            <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+            <script>
+              $.widget.bridge('uibutton', $.ui.button)
+            </script>
+            <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="dist/js/admin.js"></script>
+            <script src="dist/js/demo.js"></script>
+            <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+            <!--<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>-->
+            <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+            <!--  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>-->
+            <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+            <!--  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>-->
+            <script src="plugins/jszip/jszip.min.js"></script>
+            <script src="plugins/pdfmake/pdfmake.min.js"></script>
+            <script src="plugins/pdfmake/vfs_fonts.js"></script>
+            <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+            <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+            <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+            <script>
+              var expanded = false;
+
+              function showCheckboxes() {
+                var checkboxes = document.getElementById("checkboxes");
+                if (!expanded) {
+                  checkboxes.style.display = "block";
+                  expanded = true;
+                } else {
+                  checkboxes.style.display = "none";
+                  expanded = false;
+                }
+              }
+            </script>
+            <script>
+              $(function() {
+                $("#example1").DataTable({
+                  "responsive": true,
+                  "lengthChange": false,
+                  "autoWidth": false,
+                  "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                $('#example2').DataTable({
+                  "paging": true,
+                  "lengthChange": false,
+                  "searching": false,
+                  "ordering": true,
+                  "info": true,
+                  "autoWidth": false,
+                  "responsive": true,
+                });
+              });
+            </script>
+  </body>
+</html>

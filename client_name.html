@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+  <link rel="stylesheet" href="dist/css/admin.min.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- <link rel="stylesheet" href="plugins/bootstrap/js/bootstrap-5.min.js"> -->
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!--post editor start-->
+    <link rel="stylesheet" href="plugins/sceditor/minified/themes/default.min.css" id="theme-style" />
+    <!--post editor end-->
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <!-- Button trigger modal -->
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Please fill the attachment and notes form then the employee form will be submitted
+        </div>
+        <div class="modal-footer">
+          <a href="candidate.html">
+            <button type="button" class="btn btn-primary">OK</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="preloader">
+      <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+    </div>
+    <!-- start header code here............... -->
+    <div hrms-include-html="includes/header.html"></div>
+    <!-- end header code here............... -->
+    <!-- start leftpanel code here............... -->
+    <div hrms-include-html="includes/left-panel.html"></div>
+    <!-- end leftpanel code here............... -->
+    <div class="content-wrapper">
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <strong>
+                <h1 class="m-0">Add Client Name
+
+
+
+                </h1>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="content">
+        <div class="container-fluid">
+          <div class="card p-4">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-summary-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-summary" type="button" role="tab" aria-controls="pills-Summary"
+                  aria-selected="true">Summary</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link " id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+                  type="button" role="tab" aria-controls="pills-info" aria-selected="true">Info</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-attachment-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-attachment" type="button" role="tab" aria-controls="pills-attachment"
+                  aria-selected="false">Attachment</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-notes-tab" data-bs-toggle="pill" data-bs-target="#pills-notes"
+                  type="button" role="tab" aria-controls="pills-notes" aria-selected="false">Notes</button>
+              </li>
+            </ul>
+            
+            <div class="tab-content" id="pills-tabContent">
+              <!-- summary -->
+              <div class="tab-pane fade show active" id="pills-summary" role="tabpanel"
+              aria-labelledby="pills-summary-tab">
+              <div class="card card-default">
+                <div class="card-header">
+
+                  <div class="row pt-4">
+                  
+                    <div class="form-group col-md-3">
+                      <strong> Client Name</strong>
+                        <select name="" id="ab" class="form-select">
+                          <option value="">Select Client Name </option>
+                          <option value="">Rahul Bhojwani</option>
+                          <option value="">Amit kori</option>
+                          <option value="">Morel Dack</option>
+                          <option value="">Joni Raw</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        
+                      <strong> Client Enroll Date
+                       </strong> <br>
+                        <input type="text" class="form-control" id="" placeholder="Client Enroll Date">
+                      </div>
+                 <div class="col-md-2 mt-3">
+                  <button class="btn btn-primary">Search</button>
+                 </div>
+                  
+                 
+                   
+
+               </div><hr>
+               <div class="row">
+                <div class="col-md-2">
+                      <select name="" id="ab" class="form-select">
+                        <option value="">Page Records </option>
+                        <option value="">50</option>
+                        <option value="">100</option>
+                       <option value="">All</option>
+                      </select>
+                       </div>
+                   
+                     <div class="col-md-10 text-right">
+                       <a href="#test"  class="btn btn-primary " >
+                    
+                           Add
+                           </a>
+                           </div>
+                  
+                         </div>
+                        </div>
+                        <table class="table table-bordered tableA  ">
+                          <tr>
+                            <th> S.No.</th>
+                            <th>Name</th>
+                            <th>Email Id</th>
+                            <th>Contact No</th>
+                            <th>Location</th>
+                            <th>Enroll Date</th>
+                            <th>Action</th>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Hitesh Patel</td>
+                            <td>hitesh@gamil.com</td>
+                            <td>9638416585</td>
+                            <td>Mumbai</td>
+                            <td>02/06/2022</td>
+                           
+                            <td><a href="project.html">
+                              <i class="fas fa-trash"></i>
+                            </a>
+                            <a href="project.html">
+                              <i class="fas fa-edit"></i>
+                            </a></td>
+                          </tr>
+                       
+                          <tr>
+                            <td>2</td>
+                            <td>Amit Shrma</td>
+                            <td>Amit@gamil.com</td>
+                            <td>7556655664</td>
+                            <td>Pune</td>
+                            <td>02/09/2022</td>
+                          
+                            <td><a href="project.html">
+                              <i class="fas fa-trash"></i>
+                            </a> <a href="project.html">
+                              <i class="fas fa-edit"></i>
+                            </a></td>
+                          </tr>
+                          <tr>
+                           
+                            <td>3</td>
+                            <td>Anurudh Soni</td>
+                            <td>Anurudhshri@gmail.com</td>
+                            <td>9666667752</td>
+                            <td>Bangalore</td>
+                            <td>02/08/2022</th>
+                          
+                            <td><a href="project.html">
+                              <i class="fas fa-trash"></i>
+                            </a> <a href="project.html">
+                              <i class="fas fa-edit"></i>
+                            </a></td>
+                            
+                          </tr>
+                          <tr>
+                           
+                            <td>4</td>
+                            <td>Akhil Pal</td>
+                            <td>Akhil@gmail.com</td>
+                            <td>67676365376</td>
+                            <td>Delhi</td>
+                            <td>02/02/2022</td>
+                           
+                            <td><a href="project.html">
+                              <i class="fas fa-trash"></i>
+                            </a> <a href="project.html">
+                              <i class="fas fa-edit"></i>
+                            </a></td>
+                           
+                          </tr>
+                         
+                        </table>
+                       
+                        <div class="row p-4">
+                    
+                          <div class="dataTables_info col-6" id="example2_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div>
+                          <div class="dataTables_paginate paging_simple_numbers col-md-6 text-right" id="example2_paginate"><a class="paginate_button previous disabled" aria-controls="example2" data-dt-idx="0" tabindex="-1" id="example2_previous">Previous</a><span><a class="paginate_button current" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="example2" data-dt-idx="2" tabindex="-1" id="example2_next">Next</a></div>
+                </div><br><br>
+                    
+              </div>
+            </div>
+              
+              <!-- summary -->
+              <div class="tab-pane fade " id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                <div class="card card-default" id="test">
+                  <div class="card-header">
+                    <h3 class="card-title"><strong> Client Details</strong></h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                          class="fas fa-minus"></i> </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <label for="">Full Name <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Client Name">
+                      </div>
+                     
+                      <div class="form-group col-md-6">
+                  
+                        <label for=""> Email Id <span class="text-danger">*</span>
+                        </label>
+                        
+                          <input type="text" class="form-control" id="" placeholder="EmailID">
+                        </div>
+                        <div class="form-group col-md-6">
+                  
+                          <label for=""> Contact No  <span class="text-danger">*</span>
+                          </label>
+                           
+                            <input type="text" class="form-control" id="" placeholder="Contact No">
+                          </div>
+                        <div class="form-group col-md-6">
+                  
+                          <label for=""> Enroll Date  <span class="text-danger">*</span>
+                          </label>
+                        
+                            <input type="date" class="form-control" id="" placeholder="Enroll Date">
+                          </div>
+                          <!-- <div class="form-group col-md-6">
+                  
+                            <label for=""> Client Exit Date <span class="text-danger">*</span>
+                            </label>
+                           
+                              <input type="date" class="form-control" id="" placeholder="Client Exit Date">
+                            </div> -->
+                       
+                          
+                            <div class="form-group col-md-6">
+                  
+                              <label for="">  Website <span class="text-danger">*</span> </label>
+                                <input type="url" class="form-control" id="" placeholder="Website">
+                              </div>
+                    </div>
+                  </div>
+                
+                </div>
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Address</strong>
+                    </h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                    
+                      <div class=" col-md-6">
+                        <label for="">Country <span class="text-danger">*</span>
+                        </label>
+                        <select class="form-control select2">
+                          <option selected="selected">Select here</option>
+                          <option>India</option>
+                          <option>California</option>
+                          <option>Delaware</option>
+                          <option>Tennessee</option>
+                          <option>Texas</option>
+                          <option>Washington</option>
+                        </select>
+                      </div>
+                      <div class=" col-md-6">
+                        <label for="">State/Province</label>
+                        <input type="text" class="form-control" id="" placeholder="State/Province">
+                      </div>
+                       <div class=" col-md-6">
+                        <label for="">City <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="City">
+                      </div>
+                      <div class=" col-md-6">
+                        <label for="">ZIP/PIN Code <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" id="" placeholder="ZIP/PIN Code">
+                      </div>
+                      <div class=" col-md-6">
+                        <label for="">Street Address</label>
+                        <textarea type="text" class="form-control" id="" placeholder="Street Address"></textarea>
+                      </div>
+                      
+                     
+                     
+                
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Description</strong>
+                    </h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                        class="fas fa-minus"></i> </button>
+                    </div>
+                  </div>
+                    <div class="card-tools">
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <textarea id="example" style="height:300px;width:600px;"></textarea>
+                    <!-- <textarea class="form-control" placeholder="Project Description"></textarea> -->
+                    <!-- <a href="candidate.html" class="btn btn-primary mt-1">Add</a> -->
+                  </div>
+                </div>
+             
+              </div>
+            </div>
+           
+                <div class="card-default">
+                  <div class="card-body">
+                    <div class="row">
+
+                      <button type="button" class="btn btn-primary mb-1 col-md-1" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Submit
+                      </button>
+                      <!-- <button class="btn btn-dark ml-2 mb-1 col-md-3" onclick="stepper.next()">Cancel</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-attachment" role="tabpanel" aria-labelledby="pills-attachment-tab">
+                <div class="row">
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="">Attachment Information</label>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <select class="form-control" id="">
+                          <option>Passport size photo</option>
+                          <option>Resume</option>
+                          <option>Aadhaar Card</option>
+                          <option>Pan Card</option>
+                          <option>High School certificate</option>
+                          <option>Higher Secondary certificcate</option>
+                          <option>Graduation</option>
+                          <option>Post Graduation</option>
+                          <option>Previous organization Appointment letter</option>
+                          <option>last 3 months Salary Slip</option>
+                          <option>Resignation letter / screenshot of resignation mail send by candidate and also
+                            approved by organization</option>
+
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <div class="custom-file">
+                          <input class="custom-file-input" id="customFile" type="file">
+                          <label class="custom-file-label" for="customFile">Upload Documents</label>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-12"> <a href="candidate.html" class="btn btn-primary">Save and
+                          Add</a> </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="">Done 26 August 2021 12:30 PM | Doctype : Passport size photo</label>
+                        <span class="pull-right"><a href="" title="Edit"><i class="fa fa-download"></i></a> <a href=""
+                            title="Delete"><i class="fa fa-trash"></i></a></span>
+                        <div class="col-md-12">
+                          <p>• <a href="">Abcd.png</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="">Done 26 August 2021 12:31 PM | Doctype : Resume</label>
+                        <span class="pull-right"><a href="" title="Edit"><i class="fa fa-download"></i></a> <a href=""
+                            title="Delete"><i class="fa fa-trash"></i></a></span>
+                        <div class="col-md-12">
+                          <p>• <a href="">Resume.docx</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="card-default">
+                        <div class="card-body">
+                          <div class="row">
+                            <button class="btn btn-primary mb-1 col-md-1"
+                              onclick="location.href='';"></button>
+                             <button class="btn btn-dark ml-2 mb-1 col-md-3" onclick="stepper.next()">Cancel</button> 
+                          </div>
+                        </div>
+                      </div> -->
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-notes" role="tabpanel" aria-labelledby="pills-notes-tab">
+                <form>
+                      
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="">Add Note</label>
+                      <!-- <textarea id="example" style="height:300px;width:600px;"></textarea> -->
+                       <textarea class="form-control" placeholder="Note"></textarea>
+                       <a href="candidate.html" class="btn btn-primary mt-1">Add</a>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="">Done 26 August 2021 12:40 PM </label>
+                      <span class="pull-right"><a href="" title="Edit"><i class="fa fa-edit"></i></a> <a href=""
+                          title="Delete"><i class="fa fa-trash"></i></a></span>
+                      <input type="text" class="form-control" placeholder="Message">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="">Done 26 August 2021 12:45 PM </label>
+                      <span class="pull-right"><a href="" title="Edit"><i class="fa fa-edit"></i></a> <a href=""
+                          title="Delete"><i class="fa fa-trash"></i></a></span>
+                      <input type="text" class="form-control" placeholder="Message">
+                    </div>
+                  </div>
+                  <!-- <div class="card-default">
+                      <div class="card-body">
+                        <div class="row">
+                          <button class="btn btn-primary mb-1 col-md-1"
+                            onclick="location.href='';">Submit</button>
+                           <button class="btn btn-dark ml-2 mb-1 col-md-1" onclick="stepper.next()">Cancel</button>
+                        </div>
+                      </div>
+                    </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- start footer code here............... -->
+    <div hrms-include-html="includes/footer.html"></div>
+    <!-- end footer code here............... -->
+  </div>
+  <script src="dist/js/hrms.js"></script>
+  <script src="dist/js/script.js"></script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/js/admin.js"></script>
+  <script src="dist/js/demo.js"></script>
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="plugins/jszip/jszip.min.js"></script>
+  <script src="plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+   <!--post editor start-->
+   <script src="plugins/sceditor/minified/sceditor.min.js"></script>
+   <script>
+     var textarea = document.getElementById('example');
+     sceditor.create(textarea, {
+       format: 'bbcode',
+       icons: 'monocons',
+       style: 'minified/themes/content/default.min.css'
+     });
+     var themeInput = document.getElementById('theme');
+     themeInput.onchange = function() {
+       var theme = 'minified/themes/' + themeInput.value + '.min.css';
+       document.getElementById('theme-style').href = theme;
+     };
+   </script>
+   <!--post editor end-->
+   
+</body>
+
+</html>

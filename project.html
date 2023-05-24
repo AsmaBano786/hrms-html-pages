@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+  <link rel="stylesheet" href="dist/css/admin.min.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/js/bootstrap-5.min.js">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+   <!--post editor start-->
+   <link rel="stylesheet" href="plugins/sceditor/minified/themes/default.min.css" id="theme-style" />
+   <!--post editor end-->
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"> Please fill the attachment and notes form then the employee form will be submitted </div>
+        <div class="modal-footer">
+          <a href="candidate.html">
+            <button type="button" class="btn btn-primary">OK</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="preloader">
+      <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+    </div>
+    <!-- start header code here............... -->
+    <div hrms-include-html="includes/header.html"></div>
+    <!-- end header code here............... -->
+    <!-- start leftpanel code here............... -->
+    <div hrms-include-html="includes/left-panel.html"></div>
+    <!-- end leftpanel code here............... -->
+    <div class="content-wrapper">
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <strong>
+                <h1 class="m-0">Project</h1>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="content">
+        <div class="container-fluid">
+          <div class="card p-4">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-summary-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-summary" type="button" role="tab" aria-controls="pills-Summary"
+                  aria-selected="true">Summary</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link " id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+                  type="button" role="tab" aria-controls="pills-info" aria-selected="true">Info</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-attachment-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-attachment" type="button" role="tab" aria-controls="pills-attachment"
+                  aria-selected="false">Attachment</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-notes-tab" data-bs-toggle="pill" data-bs-target="#pills-notes"
+                  type="button" role="tab" aria-controls="pills-notes" aria-selected="false">Notes</button>
+              </li>
+            </ul>
+            
+            <div class="tab-content" id="pills-tabContent">
+              <!-- summary -->
+              <div class="tab-pane fade show active" id="pills-summary" role="tabpanel"
+                aria-labelledby="pills-summary-tab">
+                <div class="card card-default">
+                  <div class="card-header">
+
+                    <div class="row pt-4">
+                     
+                        
+
+                    
+                    <div class="col-md-2">
+                      <select name="" id="ab" class="form-select">
+                        <option value="">Select Project </option>
+                        <option value="">Gemes jungly</option>
+                        <option value="">UTI</option>
+                        <option value="">HRMS</option>
+                        <option value="">Send Qwiq mail</option>
+                     
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <select name="" id="ab" class="form-select">
+                        <option value="">Project Owner</option>
+                        <option value="">Aryan Panday</option>
+                        <option value="">Messi wos</option>
+                        <option value="">sellon silk</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <select name="" id="ab" class="form-select">
+                        <option value="">Project Status </option>
+                        <option value="">Complete</option>
+                        <option value="">WIP</option>
+                        <option value="">On Hold</option>
+                        <option value="">Start</option>
+                        <option value="">Other</option>
+                     
+                      </select>
+                    </div>
+                     
+                   <div class="col-md-2">
+                    <button class="btn btn-primary">Search</button>
+                   </div>
+                    
+                   
+                     
+
+                 </div><hr>
+                <div class="row">
+                 <div class="col-md-2">
+                  <select name="" id="ab" class="form-select">
+                    <option value="">Page Records </option>
+                    <option value="">50</option>
+                    <option value="">100</option>
+                    <option value="">All</option>
+                    
+                   
+                 
+                  </select>
+                </div>
+                    
+                      <div class="col-md-10 text-right">
+                        <a href="#test"  class="btn btn-primary " >
+                     
+                        Add
+                        </a>
+                      </div>
+                   
+                  </div>
+                </div>
+                  
+                   
+                         
+                  <table class="table table-bordered mt-3">
+                    <tr>
+                      <th> S No.</th>
+                     
+                      <th>Project Name </th>
+                     
+                      <th>Project Owner </th>
+                      <th>Client</th>
+                      <th>Point of contact</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>
+                        <a href=""> Games Jungly</a></td>
+                      <td>Amit Soni</td>
+                      <td>Sumit Panday</td>
+                      <td>Anup Soni </td>
+                      <td>Working Progress</td>
+                     
+                      <td>
+                        <a href="add-holiday.html">
+                          <i class="fas fa-trash"></i>
+                        </a>
+                        <a href="">
+                          <i class="fas fa-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td> <a href=""> HRMS </a></td>
+                      <td>Amit Rai</td>
+                      <td>Sumit raw</td>
+                      <td>Amit Rai </td>
+                      <td>Working Progress</td>
+                     
+                      <td>
+                        <a href="add-holiday.html">
+                          <i class="fas fa-trash"></i>
+                        </a>
+                        <a href="">
+                          <i class="fas fa-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td><a href=""> Mail Quiq</a></td>
+                      <td>Dev bhtt</td>
+                      <td>Sobhit Panday</td>
+                      <td>Som Dew</td>
+                      <td>On Hold</td>
+                     
+                      <td>
+                        <a href="add-holiday.html">
+                          <i class="fas fa-trash"></i>
+                        </a>
+                        <a href="">
+                          <i class="fas fa-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>
+                        <a href=""> UTI</a></td>
+                      <td>Rohit Soni</td>
+                      <td>Sumit Khare</td>
+                      <td>Anu Shrma</td>
+                      <td>Completed</td>
+                     
+                      <td>
+                        <a href="add-holiday.html">
+                          <i class="fas fa-trash"></i>
+                        </a>
+                        <a href="">
+                          <i class="fas fa-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                   
+                  
+                  </table>
+                         
+                        
+                       <div class="row p-4">
+                    
+                          <div class="dataTables_info col-6" id="example2_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div>
+                          <div class="dataTables_paginate paging_simple_numbers col-md-6 text-right" id="example2_paginate"><a class="paginate_button previous disabled" aria-controls="example2" data-dt-idx="0" tabindex="-1" id="example2_previous">Previous</a><span><a class="paginate_button current" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="example2" data-dt-idx="2" tabindex="-1" id="example2_next">Next</a></div>
+                </div><br><br>
+              </div>
+              </div>
+              <!-- /summary -->
+              <!-- Info -->
+              <div class="tab-pane fade " id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                <div class="card card-default" id="test">
+                  <div class="card-header">
+                    <h3 class="card-title"><strong> Project Details </strong></h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                          class="fas fa-minus"></i> </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <label for="">Project Name <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Project Name">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Project Owner <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Project Owner">
+                      </div>
+                      
+                       
+                    
+                      <div class="form-group col-md-6">
+                        <label for="">Project Owner Email<span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="" placeholder="Enter email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Project Status<span class="text-danger">*</span>
+                        </label>
+                        <select name="" id="ab" class="form-select form-control">
+                          <option value="">Project Status </option>
+                          <option value="">Complete</option>
+                          <option value="">WIP</option>
+                          <option value="">On Hold</option>
+                          <option value="">Start</option>
+                          <option value="">Delay</option>
+                          <option value="">Other</option>
+                       
+                        </select>
+                      </div>
+                     
+                       <div class="form-group col-md-6">
+                        <label for="">Project Start Date <span class="text-danger">*</span>
+                        </label>
+                        <input type="date" class="form-control" id="" placeholder="Project Start Date">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Project End Date <span class="text-danger">*</span>
+                        </label>
+                        <input type="date" class="form-control" id="" placeholder="Project End Date">
+                      </div>
+                      <div class="form-group col-md-12">
+                        <input type="checkbox">
+                        <label for="">Same Projects date <span class="text-danger">*</span>
+                        </label>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Project Actual Start Date <span class="text-danger">*</span>
+                        </label>
+                        <input type="date" class="form-control" id="" placeholder="Project Actual Start Date">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Project Actual End Date <span class="text-danger">*</span>
+                        </label>
+                        <input type="date" class="form-control" id="" placeholder="Project Actual End Date">
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Add Team Members</strong>
+                    </h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                          class="fas fa-minus"></i> </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-md-2">
+                        <label for="">Team Member<span class="text-danger">*</span>
+                        </label>
+                        <select name="" id="ab" class="form-select form-control">
+                          <option value="">Team Member</option>
+                          <option value="">Amit soni</option>
+                          <option value="">Vipin Jhaa</option>
+                          <option value="">Anup Soni</option>
+                          <option value="">Sumit Pal</option>
+                         
+                       
+                        </select>
+                      </div>
+                      
+                      <!-- <div class="form-group col-md-2">
+                        <label for="">Team Member<span class="text-danger">*</span>
+                        </label>
+                        <div class="multiselect1 ">
+                          <div class="selectBox abcd" onclick="showCheckboxes()">
+                            <select class="select32">
+                              <option>Select Member</option>
+                            </select>
+                            <div class="overSelect"></div>
+                          </div>
+                          <div id="checkboxes">
+                            <label for="one">
+                              <input type="checkbox" id="one" />Amit soni</label>
+                            <label for="two">
+                              <input type="checkbox" id="two" />Anurudh Shrivastava</label>
+                            <label for="three">
+                              <input type="checkbox" id="three" />Maneesh Yadav</label>
+                          </div>
+                        </div>
+                      </div> -->
+                           
+                          <div class="form-group col-md-2">
+                            <label for="">Role<span class="text-danger">*</span>
+                            </label>
+                            <select name="" id="ab" class="form-select form-control" >
+                              <option value="">Role </option>
+                              <option value="">Designer</option>
+                              <option value="">Front-end Developer</option>
+                              <option value="">Back-end Developer</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-2">
+                            <label for=""> Start Date <span class="text-danger">*</span>
+                            </label>
+                            <input type="date" class="form-control" id="" placeholder="Project Start Date">
+                          </div>
+                          <div class="form-group col-md-2">
+                            <label for=""> End Date <span class="text-danger">*</span>
+                            </label>
+                            <input type="date" class="form-control" id="" placeholder="Project End Date">
+                          </div>
+                          <div class="from-group col-md-2">
+                          <label for="">Total Working Day</label>
+                          <input type="text" class="form-control" id="" placeholder="Team Member">
+                        </div>
+                          <div class="col-md-1 text-right mt-4">
+                            <a href="#test"  class="btn btn-primary " >
+                         
+                            Close
+                            </a>
+                          </div>
+                         
+                            <div class="col-md-1 text-right mt-4 ">
+                              <a href="#test"  class="btn btn-primary " >
+                              Add
+                              </a>
+                            </div>
+                     
+                    </div>
+                
+                  
+                  </div>
+                </div>
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Client Details</strong>
+                    </h3>
+                    <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                      class="fas fa-minus"></i> </button>
+                  </div>
+                </div>
+                  <div class="card-body">
+                    <div class="row">
+                     
+                      <div class="form-group col-md-6">
+                        <label for="">Client Name<span class="text-danger">*</span>
+                        </label>
+                          <select name="" id="ab" class="form-select">
+                            <option value="">Select Client </option>
+                            <option value="">Rahul Bhojwani</option>
+                            <option value="">Amit Soni</option>
+                            <option value="">Morel Dack</option>
+                            <option value="">Joni Raw</option>
+                         
+                          </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Client POC<span class="text-danger">*</span>
+                        </label>
+                          <select name="" id="ab" class="form-select">
+                            <option value="">Select Client POC </option>
+                            <option value="">Rahul Bhojwani</option>
+                            <option value="">Amit kori</option>
+                            <option value="">Morel Dack</option>
+                            <option value="">Joni Raw</option>
+                         
+                          </select>
+                      </div>
+                   
+                      <div class="form-group col-md-6">
+                        <label for="">Client EmailID <span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="" placeholder="Client EmailID">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Client Contact No. <span class="text-danger">*</span>
+                        </label>
+                        <input type="input" class="form-control" id="" placeholder="Contact No.">
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+               
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Repository Type</strong>
+                    </h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                        class="fas fa-minus"></i> </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                     
+                      <div class="form-group col-md-3">
+                        <label for="">Repository Type <span class="text-danger">*</span>
+                        </label>
+                          <select name="" id="ab" class="form-select">
+                            <option value="">Select Repository </option>
+                            <option value="">Git</option>
+                            <option value="">SVN</option>
+                            <option value="">TFS</option>
+                            <option value="">Bitbuket</option>
+                            <option value="">Other</option>
+                         
+                          </select>
+                      </div>
+                           
+                          <div class="form-group col-md-3">
+                            <label for="">New Repository<span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="" placeholder="New Repository">
+                          </div>
+                          
+                          <div class="form-group col-md-3">
+                            <label for="">Repository Date<span class="text-danger">*</span>
+                            </label>
+                            <input type="date" class="form-control" id="" placeholder="Repository Date">
+                          </div>
+                          
+                          <div class="form-group col-md-2">
+                            <label for="">Remark<span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="" placeholder="Remark">
+                          </div>
+                         
+                          <div class="col-md-1 text-right mt-4 ">
+                            <a href="#test"  class="btn btn-primary " >
+                            Add
+                            </a>
+                          </div>
+                     
+                    </div>
+                
+                  
+                  </div>
+                </div>
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Project Description</strong>
+                    </h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                        class="fas fa-minus"></i> </button>
+                    </div>
+                  </div>
+                    <div class="card-tools">
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <textarea id="example" style="height:300px;width:600px;"></textarea>
+                    <!-- <textarea class="form-control" placeholder="Project Description"></textarea> -->
+                    <!-- <a href="candidate.html" class="btn btn-primary mt-1">Add</a> -->
+                  </div>
+                </div>
+             
+              </div>
+            </div>
+            <div class="card-default">
+              <div class="card-body">
+                <div class="row">
+                  <button type="button" class="btn btn-primary mb-1 col-md-1" data-bs-toggle="modal" data-bs-target="#exampleModal"> Submit </button>
+                  <!-- <button class="btn btn-dark ml-2 mb-1 col-md-3" onclick="stepper.next()">Cancel</button> -->
+                </div>
+              </div>
+            </div>
+              </div>
+              
+              <!-- /Info -->
+              <div class="tab-pane fade" id="pills-attachment" role="tabpanel" aria-labelledby="pills-attachment-tab">
+                <div class="row">
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="">Project Documents</label>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <select class="form-control" id="">
+                          <option>Project Documents</option>
+                          <option>Project Design</option>
+                          <option>Aadhaar Card</option>
+                          <option>Pan Card</option>
+                          <option>Previous organization Appointment letter</option>
+                          <option>last 3 months Salary Slip</option>
+                          <option>Resignation letter / screenshot of resignation mail send by candidate and also
+                            approved by organization</option>
+
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <div class="custom-file">
+                          <input class="custom-file-input" id="customFile" type="file">
+                          <label class="custom-file-label" for="customFile">Upload Documents</label>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-12"> <a href="candidate.html" class="btn btn-primary">Save and
+                          Add</a> </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="">Done 26 August 2021 12:30 PM | Doctype : Passport size photo</label>
+                        <span class="pull-right"><a href="" title="Edit"><i class="fa fa-download"></i></a> <a href=""
+                            title="Delete"><i class="fa fa-trash"></i></a></span>
+                        <div class="col-md-12">
+                          <p>• <a href="">Abcd.png</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="">Done 26 August 2021 12:31 PM | Doctype : Project Design</label>
+                        <span class="pull-right"><a href="" title="Edit"><i class="fa fa-download"></i></a> <a href=""
+                            title="Delete"><i class="fa fa-trash"></i></a></span>
+                        <div class="col-md-12">
+                          <p>• <a href="">Design.docx</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="card-default">
+                        <div class="card-body">
+                          <div class="row">
+                            <button class="btn btn-primary mb-1 col-md-1"
+                              onclick="location.href='';"></button>
+                             <button class="btn btn-dark ml-2 mb-1 col-md-3" onclick="stepper.next()">Cancel</button> 
+                          </div>
+                        </div>
+                      </div> -->
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-notes" role="tabpanel" aria-labelledby="pills-notes-tab">
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="">Note</label>
+                      <!-- <textarea id="example" style="height:300px;width:600px;"></textarea> -->
+                       <textarea class="form-control" placeholder="Note"></textarea>
+                       <a href="candidate.html" class="btn btn-primary mt-1">Add</a>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="">Done 26 August 2021 12:40 PM </label>
+                      <span class="pull-right"><a href="" title="Edit"><i class="fa fa-edit"></i></a> <a href=""
+                          title="Delete"><i class="fa fa-trash"></i></a></span>
+                      <input type="text" class="form-control" placeholder="Message">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="">Done 26 August 2021 12:45 PM </label>
+                      <span class="pull-right"><a href="" title="Edit"><i class="fa fa-edit"></i></a> <a href=""
+                          title="Delete"><i class="fa fa-trash"></i></a></span>
+                      <input type="text" class="form-control" placeholder="Message">
+                    </div>
+                  </div>
+                  <!-- <div class="card-default">
+                      <div class="card-body">
+                        <div class="row">
+                          <button class="btn btn-primary mb-1 col-md-1"
+                            onclick="location.href='';">Submit</button>
+                           <button class="btn btn-dark ml-2 mb-1 col-md-1" onclick="stepper.next()">Cancel</button>
+                        </div>
+                      </div>
+                    </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- start footer code here............... -->
+    <div hrms-include-html="includes/footer.html"></div>
+    <!-- end footer code here............... -->
+  </div>
+  <script src="dist/js/hrms.js"></script>
+  <script src="dist/js/script.js"></script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/js/admin.js"></script>
+  <script src="dist/js/demo.js"></script>
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="plugins/jszip/jszip.min.js"></script>
+  <script src="plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+  <script>
+    var expanded = false;
+
+function showCheckboxes() {
+var checkboxes = document.getElementById("checkboxes");
+if (!expanded) {
+checkboxes.style.display = "block";
+expanded = true;
+} else {
+checkboxes.style.display = "none";
+expanded = false;
+}
+}
+  </script>
+     <!--post editor start-->
+     <script src="plugins/sceditor/minified/sceditor.min.js"></script>
+     <script>
+       var textarea = document.getElementById('example');
+       sceditor.create(textarea, {
+         format: 'bbcode',
+         icons: 'monocons',
+         style: 'minified/themes/content/default.min.css'
+       });
+       
+       var themeInput = document.getElementById('theme');
+       themeInput.onchange = function() {
+         var theme = 'minified/themes/' + themeInput.value + '.min.css';
+         document.getElementById('theme-style').href = theme;
+       };
+     </script>
+     <!--post editor end-->
+</body>
+
+</html>

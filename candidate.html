@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+  <link rel="stylesheet" href="dist/css/admin.min.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- <link rel="stylesheet" href="plugins/bootstrap/js/bootstrap-5.min.js"> -->
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!--post editor start-->
+    <link rel="stylesheet" href="plugins/sceditor/minified/themes/default.min.css" id="theme-style" />
+    <!--post editor end-->
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <!-- Button trigger modal -->
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Please fill the attachment and notes form then the employee form will be submitted
+        </div>
+        <div class="modal-footer">
+          <a href="candidate.html">
+            <button type="button" class="btn btn-primary">OK</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="preloader">
+      <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+    </div>
+    <!-- start header code here............... -->
+    <div hrms-include-html="includes/header.html"></div>
+    <!-- end header code here............... -->
+    <!-- start leftpanel code here............... -->
+    <div hrms-include-html="includes/left-panel.html"></div>
+    <!-- end leftpanel code here............... -->
+    <div class="content-wrapper">
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <strong>
+                <h1 class="m-0">Employee</h1>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="content">
+        <div class="container-fluid">
+          <div class="card p-4">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-summary-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-summary" type="button" role="tab" aria-controls="pills-Summary"
+                  aria-selected="true">Summary</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link " id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+                  type="button" role="tab" aria-controls="pills-info" aria-selected="true">Info</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-attachment-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-attachment" type="button" role="tab" aria-controls="pills-attachment"
+                  aria-selected="false">Attachment</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-notes-tab" data-bs-toggle="pill" data-bs-target="#pills-notes"
+                  type="button" role="tab" aria-controls="pills-notes" aria-selected="false">Notes</button>
+              </li>
+            </ul>
+            
+            <div class="tab-content" id="pills-tabContent">
+              <!-- summary -->
+              <div class="tab-pane fade show active" id="pills-summary" role="tabpanel"
+              aria-labelledby="pills-summary-tab">
+              <div class="card card-default">
+                <div class="card-header">
+
+                  <div class="row pt-4">
+                  
+                  <div class="col-md-3">
+                    <select name="" id="ab" class="form-select">
+                      <option value="">Select EmployeeID</option>
+                      <option value="">1204</option>
+                      <option value="">1202</option>
+                      <option value="">1206</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select name="" id="ab" class="form-select">
+                      <option value="">Select Employee Name</option>
+                      <option value="">Hitesh Sharma</option>
+                      <option value="">Piyush thakur</option>
+                      <option value="">Amit rai</option>
+                    </select>
+                  </div>
+                    
+                 <div class="col-md-2">
+                  <button class="btn btn-primary">Search</button>
+                 </div>
+                  
+                 
+                   
+
+               </div><hr>
+               <div class="row">
+                <div class="col-md-2">
+                      <select name="" id="ab" class="form-select">
+                        <option value="">Page Records </option>
+                        <option value="">50</option>
+                        <option value="">100</option>
+                       <option value="">All</option>
+                      </select>
+                       </div>
+                   
+                     <div class="col-md-10 text-right">
+                       <a href="#test"  class="btn btn-primary " >
+                    
+                           Add
+                           </a>
+                           </div>
+                  
+                         </div>
+                        </div>
+                        <table class="table table-bordered tableA  ">
+                          <tr>
+                            <th>Employee ID</th>
+                          <th>Employee Name</th>
+                           <th>Joining Date</th>
+                          <th>Email address</th>
+                          
+                          <th>Designation</th>
+                          <th>Action</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="candidate.html">22345678</a>
+                            </td>
+                            <td>Neeta Sharma</td>
+                             <td>12/04/2018</td>
+                            <td>neeta@cylsys.com</td>
+                           
+                            <td>Developer</td>
+                            <td>
+                              <a href="add-holiday.html">
+                                <i class="fas fa-trash"></i>
+                              </a>
+                              <a href="">
+                                <i class="fas fa-edit"></i>
+                              </a>
+                             
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="candidate.html">32345678</a>
+                            </td>
+                            <td>Sanjay Sen</td>
+                             <td>15/01/2019</td>
+                            <td>Sanjay@cylsys.com</td>
+                          
+                            <td>Developer</td>
+                            <td>
+                              <a href="add-holiday.html">
+                                <i class="fas fa-trash"></i>
+                              </a>
+                              <a href="">
+                                <i class="fas fa-edit"></i>
+                              </a>
+                             
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="candidate.html">42345678</a>
+                            </td>
+                            <td>Samir Singh</td>
+                            <td>18/01/2020</td>
+                            <td>Samir@cylsys.com</td>
+                           
+                            <td>Developer</td>
+                            <td>
+                              <a href="add-holiday.html">
+                                <i class="fas fa-trash"></i>
+                              </a>
+                              <a href="">
+                                <i class="fas fa-edit"></i>
+                              </a>
+                             
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="candidate.html">42345656</a>
+                            </td>
+                            <td>Piyush Thakur</td>
+                              <td>01/08/2022</td>
+                            <td>Piyush.thakur@cylsys.com</td>
+                           
+                            <td>Designer</td>
+                            <td>
+                              <a href="add-holiday.html">
+                                <i class="fas fa-trash"></i>
+                              </a>
+                              <a href="">
+                                <i class="fas fa-edit"></i>
+                              </a>
+                            
+                            </td>
+                          </tr>
+                         
+                         
+                        </table>
+                       
+                        <div class="row p-4">
+                    
+                          <div class="dataTables_info col-6" id="example2_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div>
+                          <div class="dataTables_paginate paging_simple_numbers col-md-6 text-right" id="example2_paginate"><a class="paginate_button previous disabled" aria-controls="example2" data-dt-idx="0" tabindex="-1" id="example2_previous">Previous</a><span><a class="paginate_button current" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="example2" data-dt-idx="2" tabindex="-1" id="example2_next">Next</a></div>
+                </div><br><br>
+                    
+              </div>
+            </div>
+              
+              <!-- summary -->
+              <div class="tab-pane fade " id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                <div class="card card-default" id="test">
+                  <div class="card-header">
+                    <h3 class="card-title"><strong> Candidate Details </strong></h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                          class="fas fa-minus"></i> </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <label for="">Employee ID </label>
+                        <input type="text" class="form-control" id="" placeholder="EmployeeID">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">First Name <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="First Name">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Last Name <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Last Name">
+                      </div>
+                     
+                      <div class="form-group col-md-6">
+                        <label for="">Email <span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="" placeholder="Enter email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Phone <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" id="" placeholder="Phone">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Official Email <span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="" placeholder="Official Email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Aadhaar card number</label>
+                        <input type="text" class="form-control" id="" placeholder="Aadhaar card number">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">PAN card number <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="PAN card number">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Present address</strong>
+                    </h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-md-12">
+                        <input type="checkbox">
+                        <label for="">Same Address <span class="text-danger">*</span>
+                        </label>
+                      </div>
+                      <div class=" col-md-6">
+                        <label for="">Country <span class="text-danger">*</span>
+                        </label>
+                        <select class="form-control select2">
+                          <option selected="selected">Select here</option>
+                          <option>India</option>
+                          <option>California</option>
+                          <option>Delaware</option>
+                          <option>Tennessee</option>
+                          <option>Texas</option>
+                          <option>Washington</option>
+                        </select>
+                      </div>
+                      <div class=" col-md-6">
+                        <label for="">State/Province</label>
+                        <input type="text" class="form-control" id="" placeholder="State/Province">
+                      </div>
+                       <div class=" col-md-6">
+                        <label for="">City <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="City">
+                      </div>
+                      <div class=" col-md-6">
+                        <label for="">ZIP/PIN Code <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control" id="" placeholder="ZIP/PIN Code">
+                      </div>
+                      <div class=" col-md-6">
+                        <label for="">Street Address</label>
+                        <textarea type="text" class="form-control" id="" placeholder="Street Address"></textarea>
+                      </div>
+                      
+                     
+                     
+                
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Professional Details</strong>
+                    </h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <label for="">Experience <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Experience">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Current Salary <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Current Salary">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Reporting Manager</label>
+                        <select class="form-control">
+                          <option>Select here</option>
+                          <option>Pawas Goyal</option>
+                          <option>Jagarti</option>
+                          </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Designation</label>
+                        <input type="text" class="form-control" id="" placeholder="Designation">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Source of Hire</label>
+                        <select class="form-control select2">
+                          <option selected="selected">Select here</option>
+                          <option>Direct</option>
+                          <option>Newspaper</option>
+                          <option>Advertisement</option>
+                          <option>Facebook</option>
+                          <option>Twitter</option>
+                          <option>Gapps</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Skill Set <span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="" placeholder="Skill Set">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Tentative Joining Date</label>
+                        <input type="date" class="form-control" id="" placeholder="Tentative Joining Date">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Highest Qualification <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Highest Qualification">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="">Additional information <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Additional information">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Education</strong>
+                    </h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-md-3">
+                        <label for="">School Name <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="School Name">
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="">Degree/Diploma <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Degree/Diploma">
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="">Field(s) of Study <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Field(s) of Study">
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="">Date of Completion <span class="text-danger">*</span>
+                        </label>
+                        <input type="date" class="form-control" id="" placeholder="Date of Completion">
+                      </div>
+                      <div class="form-group col-md-1">
+                        <br>
+                        <button class="btn btn-primary mt-2" onclick="stepper.next()">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-default">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <strong>Experience</strong>
+                    </h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-md-2">
+                        <label for="">Occupation <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Occupation">
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="">Company <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Company">
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="">Summary <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="" placeholder="Summary">
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="">Duration</label>
+                        <input type="text" class="form-control" id="" placeholder="Duration">
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="">Currently Work Here <span class="text-danger">*</span>
+                        </label>
+                        <select class="form-control select2">
+                          <option selected="selected">Select here</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-1">
+                        <br>
+                        <button class="btn btn-primary mt-2" onclick="stepper.next()">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-default">
+                  <div class="card-body">
+                    <div class="row">
+
+                      <button type="button" class="btn btn-primary mb-1 col-md-1" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Submit
+                      </button>
+                      <!-- <button class="btn btn-dark ml-2 mb-1 col-md-3" onclick="stepper.next()">Cancel</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-attachment" role="tabpanel" aria-labelledby="pills-attachment-tab">
+                <div class="row">
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="">Attachment Information</label>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <select class="form-control" id="">
+                          <option>Passport size photo</option>
+                          <option>Resume</option>
+                          <option>Aadhaar Card</option>
+                          <option>Pan Card</option>
+                          <option>High School certificate</option>
+                          <option>Higher Secondary certificcate</option>
+                          <option>Graduation</option>
+                          <option>Post Graduation</option>
+                          <option>Previous organization Appointment letter</option>
+                          <option>last 3 months Salary Slip</option>
+                          <option>Resignation letter / screenshot of resignation mail send by candidate and also
+                            approved by organization</option>
+
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <div class="custom-file">
+                          <input class="custom-file-input" id="customFile" type="file">
+                          <label class="custom-file-label" for="customFile">Upload Documents</label>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-12"> <a href="candidate.html" class="btn btn-primary">Save and
+                          Add</a> </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="">Done 26 August 2021 12:30 PM | Doctype : Passport size photo</label>
+                        <span class="pull-right"><a href="" title="Edit"><i class="fa fa-download"></i></a> <a href=""
+                            title="Delete"><i class="fa fa-trash"></i></a></span>
+                        <div class="col-md-12">
+                          <p>• <a href="">Abcd.png</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="">Done 26 August 2021 12:31 PM | Doctype : Resume</label>
+                        <span class="pull-right"><a href="" title="Edit"><i class="fa fa-download"></i></a> <a href=""
+                            title="Delete"><i class="fa fa-trash"></i></a></span>
+                        <div class="col-md-12">
+                          <p>• <a href="">Resume.docx</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="card-default">
+                        <div class="card-body">
+                          <div class="row">
+                            <button class="btn btn-primary mb-1 col-md-1"
+                              onclick="location.href='';"></button>
+                             <button class="btn btn-dark ml-2 mb-1 col-md-3" onclick="stepper.next()">Cancel</button> 
+                          </div>
+                        </div>
+                      </div> -->
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-notes" role="tabpanel" aria-labelledby="pills-notes-tab">
+                <form>
+                      
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="">Add Notes</label>
+                      <textarea id="example" style="height:300px;width:600px;"></textarea>
+                      <!-- <textarea class="form-control" placeholder="Project Description"></textarea> -->
+                      <!-- <a href="candidate.html" class="btn btn-primary mt-1">Add</a> -->
+                      <a href="candidates.html" class="btn btn-primary mt-1">Save and Add</a>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="">Done 26 August 2021 12:40 PM </label>
+                      <span class="pull-right"><a href="" title="Edit"><i class="fa fa-edit"></i></a> <a href=""
+                          title="Delete"><i class="fa fa-trash"></i></a></span>
+                      <input type="text" class="form-control" placeholder="Message">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="">Done 26 August 2021 12:45 PM </label>
+                      <span class="pull-right"><a href="" title="Edit"><i class="fa fa-edit"></i></a> <a href=""
+                          title="Delete"><i class="fa fa-trash"></i></a></span>
+                      <input type="text" class="form-control" placeholder="Message">
+                    </div>
+                  </div>
+                  <!-- <div class="card-default">
+                      <div class="card-body">
+                        <div class="row">
+                          <button class="btn btn-primary mb-1 col-md-1"
+                            onclick="location.href='';">Submit</button>
+                           <button class="btn btn-dark ml-2 mb-1 col-md-1" onclick="stepper.next()">Cancel</button>
+                        </div>
+                      </div>
+                    </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- start footer code here............... -->
+    <div hrms-include-html="includes/footer.html"></div>
+    <!-- end footer code here............... -->
+  </div>
+  <script src="dist/js/hrms.js"></script>
+  <script src="dist/js/script.js"></script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/js/admin.js"></script>
+  <script src="dist/js/demo.js"></script>
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="plugins/jszip/jszip.min.js"></script>
+  <script src="plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+   <!--post editor start-->
+   <script src="plugins/sceditor/minified/sceditor.min.js"></script>
+   <script>
+     var textarea = document.getElementById('example');
+     sceditor.create(textarea, {
+       format: 'bbcode',
+       icons: 'monocons',
+       style: 'minified/themes/content/default.min.css'
+     });
+     var themeInput = document.getElementById('theme');
+     themeInput.onchange = function() {
+       var theme = 'minified/themes/' + themeInput.value + '.min.css';
+       document.getElementById('theme-style').href = theme;
+     };
+   </script>
+   <!--post editor end-->
+</body>
+
+</html>

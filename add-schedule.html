@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>add-schedule</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css" />
+    <link rel="stylesheet" href="dist/css/admin.min.css" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <div class="preloader">
+        <img class="animation__shake" src="dist/img/logo.png" alt="Logo" />
+      </div>
+      <!-- start header code here............... -->
+      <div hrms-include-html="includes/header.html"></div>
+      <!-- end header code here............... -->
+      <!-- start leftpanel code here............... -->
+      <div hrms-include-html="includes/left-panel.html"></div>
+      <!-- end leftpanel code here............... -->
+      <div class="content-wrapper">
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-12">
+                <h1 class="m-0"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="tab-content">
+                <div class="active tab-pane" id="info">
+                  <div class="card card-default">
+                    <div class="card-header">
+                      <h3 class="card-title">
+                        <strong>Add Schedule</strong>
+                      </h3>
+                      <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="active tab-pane" id="info">
+                        <div class="card card-default">
+                          <div class="card-header">
+                            <div class="form-group row">
+                              <label for="" class="col-md-2 pl-3">Schedule Name <span class="text-danger">*</span>
+                              </label>
+                              <input type="text" class="form-control col-md-3" id="text" />
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-md-2 pl-3">Time of Schedule <span class="text-danger">*</span>
+                              </label>
+                              <input type="time" class="form-control col-md-3" id="name" name="time" />
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-md-2 pl-3">Date <span class="text-danger">*</span>
+                              </label>
+                              <input type="date" class="form-control col-md-3" id="name" name="date" />
+                            </div>
+                            <div class="row">
+                              <label for="" class="col-md-2 pl-3">Applicable For <span class="text-danger">*</span>
+                              </label>
+                              <div class="dropdown col-md-1">
+                                <button class="btn border dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> User </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <ul class="items">
+                                    <li>
+                                      <input type="checkbox" /> 1- Sayali Ashsih Anande
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S1- Allan Francis
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S2- Aleo Kirb
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S3- Austin Mayer
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S4- Charles Mavric
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S5- Dave Duken
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S6- George Dwell
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S7- Jennifer Jackson
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S8- Morgan Finely
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S9- Ruby Richards
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> S10- Tia Burmen
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="dropdown col-md-2">
+                                <button class="btn border dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Department </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <ul class="items">
+                                    <li>
+                                      <input type="checkbox" /> Marketing
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Product
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> HR
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Sales
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Services
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Information Technology
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="dropdown col-md-2">
+                                <button class="btn border dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Designation </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <ul class="items">
+                                    <li>
+                                      <input type="checkbox" /> Public Relationship Officer
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Head of Department
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Associate
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Executive
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Officer
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="dropdown col-md-1">
+                                <button class="btn border dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Roles </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <ul class="items">
+                                    <li>
+                                      <input type="checkbox" /> Manager
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Team Incharge
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Team Member
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Director
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Admin
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="dropdown col-md-2">
+                                <button class="btn border dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Location </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <ul class="items">
+                                    <li>
+                                      <input type="checkbox" /> Kurdivadi
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> New York
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Sacramento
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Busan
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Bruges
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Mumbai
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="dropdown col-md-2">
+                                <button class="btn border dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Groups </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <ul class="items">
+                                    <li>
+                                      <input type="checkbox" /> Marketing
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Product
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> HR
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Sales
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Services
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" /> Information Technology
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn btn-primary" onclick="location.href='compensatory-request-scheduler.html';"> Submit </button>
+                      <button class="btn border ml-2 mb-1" onclick="stepper.next()"> Cancel </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <footer class="main-footer"><strong>Copyright &copy; 2014-2021 <a href="">Cylsys</a>.</strong> All rights reserved.
+    </footer> -->
+      <!-- start footer code here............... -->
+      <div hrms-include-html="includes/footer.html"></div>
+      <!-- end footer code here............... -->
+    </div>
+    <script src="dist/js/hrms.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+      $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/admin.js"></script>
+    <script src="dist/js/demo.js"></script>
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <!--<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <!--  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <!--  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>-->
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  </body>
+</html>

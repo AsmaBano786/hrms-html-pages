@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>new-leave-type</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+    <link rel="stylesheet" href="dist/css/admin.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <div class="preloader">
+        <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+      </div>
+      <!-- start header code here............... -->
+      <div hrms-include-html="includes/header.html"></div>
+      <!-- end header code here............... -->
+      <!-- start leftpanel code here............... -->
+      <div hrms-include-html="includes/left-panel.html"></div>
+      <!-- end leftpanel code here............... -->
+      <div class="content-wrapper">
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-12">
+                <h1 class="m-0">New Leave Type</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="content">
+          <div class="container-fluid">
+            <div class="card">
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="active tab-pane" id="info">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h3 class="card-title">
+                          <strong>New Leave Type</strong>
+                        </h3>
+                        <div class="card-tools">
+                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="form-group col-md-6">
+                            <label for="">Name <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="" placeholder=" Name">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="">Type <span class="text-danger">*</span>
+                            </label>
+                            <select class="form-control ">
+                              <option>Paid</option>
+                              <option>Unpaid</option>
+                              <option>On Duty</option>
+                              <option>Restricted Holiday</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="">Code <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="" placeholder="Code">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="">Image <span class="text-danger">*</span>
+                            </label>
+                            <input type="file" class="form-control" id="">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="" class="col-md-12">Unit <span class="text-danger">*</span>
+                            </label>
+                            <input type="radio" id="Days"> Days <span class="pl-5"></span>
+                            <input type="radio" id="Hour"> Hours
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="" class="col-md-12">Unit <span class="text-danger">*</span>
+                            </label>
+                            <input type="radio" id="Fixed entitlement"> Fixed entitlement <input type="radio" id="Leave grant"> Leave grant
+                          </div>
+                          <div class="form-group col-md-6">
+                            <div class="row">
+                              <label for="" class="col-md-12">Validity <span class="text-danger">*</span>
+                              </label>
+                              <input type="date" class="form-control col-md-6" id="">
+                              <input type="date" class="form-control col-md-6" id="">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="">Reason For Leave <span class="text-danger">*</span>
+                            </label>
+                            <textarea class="form-control col-md-12" id="exampleFormControlTextarea1" rows="2"></textarea>
+                          </div>
+                          <div class="container">
+                            <ul class="nav nav-pills">
+                              <li class="mr-3">
+                                <a href="entitlement.html">Entitlement</a>
+                              </li>
+                              <li class="mr-3">
+                                <a href="applicable.html">Applicable</a>
+                              </li>
+                              <li>
+                                <a href="restrictions.html">Restrictions</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary mb-1" onclick="location.href='leave-type.html';">Add</button>
+                <button class="btn border ml-2 mb-1" onclick="stepper.next()">Cancel</button>
+              </div>
+            </div>
+        </section>
+      </div>
+      <!-- <footer class="main-footer"><strong>Copyright &copy; 2014-2021 <a href="">Cylsys</a>.</strong> All rights reserved.
+    </footer> -->
+      <!-- start footer code here............... -->
+      <div hrms-include-html="includes/footer.html"></div>
+      <!-- end footer code here............... -->
+    </div>
+    <script src="dist/js/hrms.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+      $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/admin.js"></script>
+    <script src="dist/js/demo.js"></script>
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <!--<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <!--  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>-->
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <!--  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>-->
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script>
+      $(function() {
+        $("#example1").DataTable({
+          "responsive": true,
+          "lengthChange": false,
+          "autoWidth": false,
+          "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": true,
+          "autoWidth": false,
+          "responsive": true,
+        });
+      });
+    </script>
+  </body>
+</html>

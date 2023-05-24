@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Role</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+  <link rel="stylesheet" href="dist/css/admin.min.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/js/bootstrap-5.min.js">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+   <!--post editor start-->
+   <link rel="stylesheet" href="plugins/sceditor/minified/themes/default.min.css" id="theme-style" />
+   <!--post editor end-->
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <!-- Button trigger modal -->
+ 
+  <div class="wrapper">
+     <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> Add New Role</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"> 
+            
+            <div class="form-group ">
+                <label for="">Role Name <span class="text-danger">*</span>
+                </label>
+                <input type="email" class="form-control" id="" placeholder="Role Name">
+              </div>
+              <div class="row">
+              <div class="form-group col-md-4">
+                <input type="radio" id="age2" name="age" value="60">
+              <label for="age2">Ganeral Role</label><br>  
+              </div>
+              <div class="form-group col-md-4">
+                <input type="radio" id="age2" name="age" value="60">
+              <label for="age2">Specific Role</label><br>  
+              </div> 
+              <div class="form-group col-md-12">
+                <label for="">Clone Role<span class="text-danger">*</span>
+                </label>
+                  <select name="" id="ab" class="form-select">
+                    <option value="">Director</option>
+                    <option value="">Manager</option>
+                    <option value="">Supervisor</option>
+                    <option value="">Team Incharge</option>
+                    <option value="">Team Member</option>
+                 
+                  </select>
+              </div>
+            </div> 
+             </div>
+        <div class="modal-footer">
+          <a href="role.html">
+            <button type="button" class="btn btn-primary">Create</button>
+          </a>
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal-2-->
+
+    <div class="preloader">
+      <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+    </div>
+    <!-- start header code here............... -->
+    <div hrms-include-html="includes/header.html"></div>
+    <!-- end header code here............... -->
+    <!-- start leftpanel code here............... -->
+    <div hrms-include-html="includes/left-panel.html"></div>
+    <!-- end leftpanel code here............... -->
+    <div class="content-wrapper">
+      <div class="content-header">
+      
+        <div class="container-fluid">
+         
+        </div>
+      </div>
+      <section class="content">
+        <div class="container-fluid">
+       
+          <div class="card ">
+            <div class="card-header">
+              <strong>
+                <h4 >Permissions</h4>
+              </strong></div>
+              <div class="row p-4">
+              
+                <div class="col-md-1">    
+                <h5>Form </h5>
+              </div>
+             
+              <div class="col-md-3"> 
+                <span class="mb-2">Employee</span>
+                    <select name="" id="ab" class="form-select" >
+                      <option value="">Address Proof </option>
+                      <option value="">Asset</option>
+                      <option value="">Project</option>
+                      <option value="">Clients</option>
+                      <option value="">Candidate</option>
+                      <option value="">Department</option>
+                      <option value="">Designation</option>
+                      <option value="">Employee</option>
+                   
+                   
+                    </select>
+                </div>
+               <div class="col-md-1"></div>
+               <div class="col-md-1"><i class="fa fa-user-alt-slash circle"></i>
+                <label for="">No Data </label> </div>
+               <div class="col-md-1"><i class="fa fa-user-tie circle"></i>
+                <label for="">My Data </label></div>
+                <div class="col-md-2">
+                  <center><i class="fa fa-user-friends circle"></i></center>
+                  <label for="" class="ml-5"> Reportees'Data </label></div>
+               <div class="col-md-2"><center><i class="circle fa fa-users-cog"></i></center>
+                <label for="">
+                Reportees'Data/My Data </label></div>
+               <div class="col-md-1"><i class="fa fa-users circle"></i>
+                <label for="">  All Data </label></div>
+               
+              </div><hr>
+          
+            
+            <div class="tab-content" id="pills-tabContent">
+          
+                <div class="card card-default">
+                 
+                   
+                  <table class="table ">
+                    <thead> <tr class=""><th width="22%" rowspan="4" class="btmbrd"> <span class="PL20">Roles</span> </th>
+                      <th width="42%" colspan="4" class="text-center"> <span>Record Permissions</span> </th>
+                      <th width="12%" class="text-center"> <span>Field Permissions</span> </th>
+                      <th colspan="2" class="text-center"> <span>Action Permission</span> </th></tr><tr class="bgrey">
+                        <th class="text-center ">View</th>
+                         <th class="text-center">Edit</th>
+                         <th class=" text-center">Add</th> 
+                        <th class="text-center">Delete</th> 
+                        <th class="text-center"></th>
+                       <th class=" text-center">Import</th>
+                        <th class="text-center">Export</th></tr></thead>
+                        <tbody>
+                   
+                    <tr>
+                      <td ><Strong> <a href="from-permissions.html" class="dark"> HR</a></Strong></td>
+                      <td ><center><input  type="checkbox" class="fa fa-users circle" id="html1" name="fav_language"value="html" checked ></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-users circle " id="html" name="fav_language" value="html" ></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-user-tie circle" id="html" name="fav_language" value="html"></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-user-alt-slash circle" id="html" name="fav_language" value="html"></center></td>
+                      <td><center><a href="from-permissions.html"><i class="fa fa-box circle"></i></a></center>
+                      </td>
+                      <td ><center><input type="radio" class="fa fa-check circle" id="html4" name="fav_language4"value="html4"checked ><input type="radio" class="circle fa fa-times" id="html4" name="fav_language4" value="html4"></center></td>
+                      <td ><center><input type="radio" class="fa fa-check circle" id="html5" name="fav_language5"value="html5"checked ><input type="radio" class="circle fa fa-times" id="html5" name="fav_language5" value="html5"></center></td>
+                     
+                     
+                    </tr>
+                    <tr>
+                      <td><strong><a href="from-permissions.html" class="dark"> Admin</a></strong> </td>
+                      <td ><center><input type="checkbox" class="fa fa-users circle" id="html1" name="fav_language1" value="html1" checked ></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-users circle" id="html1" name="fav_language1" value="html1"></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-user-tie circle" id="html1" name="fav_language1" value="html1"></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-user-alt-slash circle" id="html1" name="fav_language1" value="html1"></center></td>
+                      <td><center><a href="from-permissions.html"><i class="fa fa-box circle"></i></a></center>
+                      </td>
+                      <td ><center><input type="radio" class="fa fa-check circle" id="html6" name="fav_language6"value="html6"checked ><input type="radio" class="circle fa fa-times" id="html6" name="fav_language6" value="html6"></center></td>
+                      <td ><center><input type="radio" class="fa fa-check circle" id="html7" name="fav_language7"value="html7"checked ><input type="radio" class="circle fa fa-times" id="html7" name="fav_language7" value="html7"></center></td>
+                     
+                     
+                    </tr>
+                    <tr>
+                      <td><strong><a href="from-permissions.html" class="dark"> Reporting Manager</a></strong></td>
+                      <td ><center><input type="checkbox" class="fa fa-users circle" id="html2" name="fav_language2" value="html2" checked></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-users circle" id="html2" name="fav_language2" value="html2"></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-user-tie circle" id="html2" name="fav_language2" value="html2"></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-user-alt-slash circle" id="html2" name="fav_language2" value="html2"></center></td>
+                      <td><center><a href="from-permissions.html"><i class="fa fa-box circle"></i></a></center>
+                      </td>
+                      <td ><center><input type="radio" class="fa fa-check circle" id="html8" name="fav_language8"value="html8"checked ><input type="radio" class="circle fa fa-times" id="html8" name="fav_language8" value="html8"></center></td>
+                      <td ><center><input type="radio" class="fa fa-check circle" id="html9" name="fav_language9"value="html9"checked ><input type="radio" class="circle fa fa-times" id="html9" name="fav_language9" value="html9"></center></td>
+                     
+                     
+                    </tr>
+                    <tr>
+                      <td><strong><a href="from-permissions.html" class="dark"> Team Member</a></strong></td>
+                       <td ><center><input type="checkbox" class="fa fa-users circle" id="html3" name="fav_language3" value="html3" checked></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-users circle" id="html3" name="fav_language3" value="html3"></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-user-tie circle" id="html3" name="fav_language3" value="html3"></center></td>
+                      <td ><center><input type="checkbox" class="fa fa-user-alt-slash circle" id="html3" name="fav_language3" value="html3"></center></td>
+                      <td><center><a href="from-permissions.html"><i class="fa fa-box circle"></i></a></center>
+                      </td>
+                      <td ><center><input type="radio" class="fa fa-check circle" id="html10" name="fav_language10"value="html10"checked ><input type="radio" class="circle fa fa-times" id="html10" name="fav_language10" value="html10"></center></td>
+                      <td ><center><input type="radio" class="fa fa-check circle" id="html11" name="fav_language11"value="html11"checked ><input type="radio" class="circle fa fa-times" id="html11" name="fav_language11" value="html11"></center></td>
+                     
+                     
+                    </tr>
+                  </tbody>
+                  </table>
+              
+                       </div>
+                     
+              <!-- /role -->
+              <!-- Specific Role Assignment-->
+            
+                </div>
+            
+          
+             
+              
+            
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- start footer code here............... -->
+    <div hrms-include-html="includes/footer.html"></div>
+    <!-- end footer code here............... -->
+  </div>
+  <script src="dist/js/hrms.js"></script>
+  <script src="dist/js/script.js"></script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/js/admin.js"></script>
+  <script src="dist/js/demo.js"></script>
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="plugins/jszip/jszip.min.js"></script>
+  <script src="plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+  <script>
+    var expanded = false;
+
+function showCheckboxes() {
+var checkboxes = document.getElementById("checkboxes");
+if (!expanded) {
+checkboxes.style.display = "block";
+expanded = true;
+} else {
+checkboxes.style.display = "none";
+expanded = false;
+}
+}
+  </script>
+     <!--post editor start-->
+     <script src="plugins/sceditor/minified/sceditor.min.js"></script>
+     <script>
+       var textarea = document.getElementById('example');
+       sceditor.create(textarea, {
+         format: 'bbcode',
+         icons: 'monocons',
+         style: 'minified/themes/content/default.min.css'
+       });
+       
+       var themeInput = document.getElementById('theme');
+       themeInput.onchange = function() {
+         var theme = 'minified/themes/' + themeInput.value + '.min.css';
+         document.getElementById('theme-style').href = theme;
+       };
+     </script>
+     <!--post editor end-->
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Setting</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+    <link rel="stylesheet" href="dist/css/admin.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <div class="preloader ">
+        <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+      </div>
+      <!-- start header code here............... -->
+      <div hrms-include-html="includes/header.html"></div>
+      <!-- end header code here............... -->
+      <!-- start leftpanel code here............... -->
+      <div hrms-include-html="includes/left-panel.html"></div>
+      <!-- end leftpanel code here............... -->
+      <div class="content-wrapper">
+      
+        <div class="content-header">
+            
+            <div class="col-sm-12">
+          
+            </div>
+            <div class="card card-default">
+                <div class="card-header">
+                  <strong> <h2 style="font-style: oblique;">Setup</h2></strong>  
+           
+                  
+                </div><br>
+                <div class="row"> 
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <input type="text" name="" class="form-control" id="" placeholder="Search ">
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-primary">Search</button>
+                   </div>
+                   <div class="col-md-1"></div>
+              </div><hr>
+                <div class="col-md-12 p-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>General</h4>
+                 
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Organization</h4>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>User Access control</h4>
+                        </div><hr><br><br>
+
+                        <div class="col-md-4">
+                           
+                  <a href="company.html"><br><h5 style="color: black;">Company Details</h5></a>   
+                        </div>
+                        <div class="col-md-4  ">
+                            <a href="user.html"><br><h5 style="color: black;">Users</h5></a>  <br><br> 
+                            <a href="candidate.html"><h5 style="color: black;">Employee Profile</h5></a> <br> <br>
+                            <a href="department.html"><h5 style="color: black;">Department</h5></a> <br><br>
+                            <a href="designation.html"><h5 style="color: black;"> Designation </h5></a>  <br> <br>
+                             
+                        </div><br>
+                        <div class="col-md-4 bottom">
+                            <a href="role.html"><br><h5 style="color: black;">Role</h5></a>   
+                        </div>
+                    </div>
+                </div>  
+            </div>
+          </div>
+        </div>
+            <!-- start footer code here............... -->
+            <div hrms-include-html="includes/footer.html"></div>
+            <!-- end footer code here............... -->
+            </div>
+            <script src="dist/js/hrms.js"></script>
+            <script src="dist/js/script.js"></script>
+            <script src="plugins/jquery/jquery.min.js"></script>
+            <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+            <script>
+              $.widget.bridge('uibutton', $.ui.button)
+            </script>
+            <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="dist/js/admin.js"></script>
+            <script src="dist/js/demo.js"></script>
+            <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+            <!--<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>-->
+            <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+            <!--  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>-->
+            <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+            <!--  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>-->
+            <script src="plugins/jszip/jszip.min.js"></script>
+            <script src="plugins/pdfmake/pdfmake.min.js"></script>
+            <script src="plugins/pdfmake/vfs_fonts.js"></script>
+            <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+            <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+            <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+            <script>
+              var expanded = false;
+
+              function showCheckboxes() {
+                var checkboxes = document.getElementById("checkboxes");
+                if (!expanded) {
+                  checkboxes.style.display = "block";
+                  expanded = true;
+                } else {
+                  checkboxes.style.display = "none";
+                  expanded = false;
+                }
+              }
+            </script>
+            <script>
+              $(function() {
+                $("#example1").DataTable({
+                  "responsive": true,
+                  "lengthChange": false,
+                  "autoWidth": false,
+                  "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                $('#example2').DataTable({
+                  "paging": true,
+                  "lengthChange": false,
+                  "searching": false,
+                  "ordering": true,
+                  "info": true,
+                  "autoWidth": false,
+                  "responsive": true,
+                });
+              });
+            </script>
+  </body>
+</html>

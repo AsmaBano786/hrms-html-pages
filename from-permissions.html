@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Role</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-5.min.css">
+  <link rel="stylesheet" href="dist/css/admin.min.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/js/bootstrap-5.min.js">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+   <!--post editor start-->
+   <link rel="stylesheet" href="plugins/sceditor/minified/themes/default.min.css" id="theme-style" />
+   <!--post editor end-->
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <!-- Button trigger modal -->
+ 
+  <div class="wrapper">
+     <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> Add New Role</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"> 
+            
+            <div class="form-group ">
+                <label for="">Role Name <span class="text-danger">*</span>
+                </label>
+                <input type="email" class="form-control" id="" placeholder="Role Name">
+              </div>
+              <div class="row">
+              <div class="form-group col-md-4">
+                <input type="radio" id="age2" name="age" value="60">
+              <label for="age2">Ganeral Role</label><br>  
+              </div>
+              <div class="form-group col-md-4">
+                <input type="radio" id="age2" name="age" value="60">
+              <label for="age2">Specific Role</label><br>  
+              </div> 
+              <div class="form-group col-md-12">
+                <label for="">Clone Role<span class="text-danger">*</span>
+                </label>
+                  <select name="" id="ab" class="form-select">
+                    <option value="">Director</option>
+                    <option value="">Manager</option>
+                    <option value="">Supervisor</option>
+                    <option value="">Team Incharge</option>
+                    <option value="">Team Member</option>
+                 
+                  </select>
+              </div>
+            </div> 
+             </div>
+        <div class="modal-footer">
+          <a href="role.html">
+            <button type="button" class="btn btn-primary">Create</button>
+          </a>
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal-2-->
+
+    <div class="preloader">
+      <img class="animation__shake" src="dist/img/logo.png" alt="Logo">
+    </div>
+    <!-- start header code here............... -->
+    <div hrms-include-html="includes/header.html"></div>
+    <!-- end header code here............... -->
+    <!-- start leftpanel code here............... -->
+    <div hrms-include-html="includes/left-panel.html"></div>
+    <!-- end leftpanel code here............... -->
+    <div class="content-wrapper">
+      <div class="content-header">
+      
+        <div class="container-fluid">
+         
+        </div>
+      </div>
+      <section class="content">
+        <div class="container-fluid">
+       
+          <div class="card ">
+            <div class="card-header">
+              <strong>
+                <h4 >Permissions</h4>
+              </strong></div>
+              <div class="row p-4">
+                <div class="col-md-1">
+                </div>   
+                <div class="col-md-1">    
+                <h5>Form </h5>
+              </div>
+             
+              <div class="col-md-3"> 
+               
+                    <select name="" id="ab" class="form-select" >
+                        <option value="">Employee</option>
+                      <option value="">Address Proof </option>
+                      <option value="">Asset</option>
+                      <option value="">Project</option>
+                      <option value="">Clients</option>
+                      <option value="">Candidate</option>
+                      <option value="">Department</option>
+                      <option value="">Designation</option>
+                     
+                   
+                   
+                    </select>
+                </div>
+                <div class="col-md-1">    
+                    <h5>Role </h5>
+                  </div>
+                  <div class="col-md-3"> 
+               
+                    <select name="" id="ab" class="form-select" >
+                      <option value="">HR </option>
+                      <option value="">Team Member</option>
+                      <option value="">Reporting Manager</option>
+                      <option value="">Admin</option>
+                    </select>
+                </div>
+               
+             
+              </div><hr>
+            <ul class="nav nav-pills " id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-summary-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-summary" type="button" role="tab" aria-controls="pills-Summary"
+                  aria-selected="true">Record Permissions</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link " id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+                  type="button" role="tab" aria-controls="pills-info" aria-selected="true">Field Permissions</button>
+              </li>
+              
+            </ul>
+            
+            <div class="tab-content" id="pills-tabContent">
+              <!-- role -->
+              <div class="tab-pane fade show active" id="pills-summary" role="tabpanel"
+                aria-labelledby="pills-summary-tab">
+                <div class="card card-default">
+                 
+                   
+                  <table class="table ">
+                 <thead>
+                  <tr>
+                          <th></th>
+                         <th><p>No Data</p></th>
+                       <th><p>My Data</p></th>
+                     <th><p>Reportees'Data</p></th>
+                   <th> <p>Reportees'Data/My Data</p></th>
+                 <th><p>All Data</p></th>
+               </tr>
+                 </thead>
+                        <tbody>
+                            <div id="myDIV">
+                    <tr>
+                      <td>View</td>
+                     
+                       
+                      <td><center><input type="radio" class="fa fa-user-alt-slash circle" id="html" name="fav_language" value="html"></center>
+                        <td ><center><input type="radio" class="fa fa-user-tie circle" id="html" name="fav_language" value="html"></center></td>
+                      <td ><center><input type="radio" class="circle fa fa-user-friends " id="html" name="fav_language" value="html" ></center></td>
+                      <td ><center><input type="radio" class="circle fa fa-users-cog" id="html" name="fav_language" value="html"></center></td>
+                      <td ><Center><input type="radio" class="fa fa-users circle" id="html1" name="fav_language" value="html"checked ></Center></td>
+                    
+                     
+                     
+                     
+                    </tr>
+                    <tr>
+                      <td>Edit</td>
+                      <td><center><input type="radio" class="fa fa-user-alt-slash circle" id="html1" name="fav_language1" value="html1"></center>
+                        <td ><center><input type="radio" class="fa fa-user-tie circle" id="html1" name="fav_language1" value="html1"></center></td>
+                      <td ><center><input type="radio" class="circle fa fa-user-friends " id="html1" name="fav_language1" value="html1" ></center></td>
+                      <td ><center><input type="radio" class="circle fa fa-users-cog" id="html1" name="fav_language1" value="html1"></center></td>
+                      <td ><Center><input type="radio" class="fa fa-users circle" id="html1" name="fav_language1" value="html1" checked ></Center></td>
+                    
+                     
+                     
+                     
+                    </tr>
+                    <tr>
+                      <td>Add</td>
+                      <td><center><input type="radio" class="fa fa-user-alt-slash circle" id="html2" name="fav_language2" value="html2"></center>
+                        <td ><center><input type="radio" class="fa fa-user-tie circle" id="html2" name="fav_language2" value="html2"></center></td>
+                      <td ><center><input type="radio" class="circle fa fa-user-friends " id="html2" name="fav_language2" value="html2" ></center></td>
+                      <td ><center><input type="radio" class="circle fa fa-users-cog" id="html2" name="fav_language2" value="html2"></center></td>
+                      <td ><Center><input type="radio" class="fa fa-users circle" id="html2" name="fav_language2"value="html2" checked ></Center></td>
+                    
+                     
+                     
+                     
+                    </tr>
+                    <tr>
+                      <td>Delete</td>
+                      <td><center><input type="radio" class="fa fa-user-alt-slash circle" id="html3" name="fav_language3" value="html3"></center>
+                        <td ><center><input type="radio" class="fa fa-user-tie circle" id="html3" name="fav_language3" value="html3"></center></td>
+                      <td ><center><input type="radio" class="circle fa fa-user-friends " id="html3" name="fav_language3" value="html3" ></center></td>
+                      <td ><center><input type="radio" class="circle fa fa-users-cog" id="html3" name="fav_language3" value="html3"></center></td>
+                      <td ><Center><input type="radio" class="fa fa-users circle" id="html3" name="fav_language3" value="html3" checked ></Center></td>
+                    
+                     
+                     
+                    </tr>
+                </div>
+                  </tbody>
+                  </table>
+                </div>  
+                       </div>
+                     
+              <!-- /role -->
+              <!-- Specific Role Assignment-->
+              <div class="tab-pane fade " id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                <div class="card card-default" id="test">
+                        <div class="card-header">
+                          <h3 class="card-title">
+                            <strong><input type="checkbox">&nbsp;  Basic infprmatiom</strong>
+                          </h3>
+                          <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                              class="fas fa-minus"></i> </button>
+                          </div>
+                        </div>
+                      
+                        <div class="card-body">
+                          <div class="row">
+                           
+                          
+                            <table class="table ">
+                                <tr>
+                                  <th>Field Name</th>   
+                                  <th>View Permission </th>
+                                  <th>Edit Permission</th>
+                                 
+                                 
+                                </tr>
+                            
+                                <tr>
+                                  <td><input type="checkbox"> &nbsp;Employee Id</td>
+                                  <td> <input type="radio" class="fa fa-users circle" id="html4" name="fav_language4" value="html4" checked>
+                                    <input type="radio" class="fa fa-user-tie circle" id="html4" name="fav_language4" value="html4" checked>
+                                    <input type="radio" class="fa fa-user-alt-slash circle" id="html4" name="fav_language4" value="html4" checked>
+                                    <input type="radio" class="circle fa fa-users-cog" id="html4" name="fav_language4" value="html4" checked>
+                                    <input type="radio" class="circle fa fa-user-friends " id="html4" name="fav_language4" value="html4" ></td>
+                                    
+                                  <td> <input type="radio" class="fa fa-users circle" id="html5" name="fav_language5" value="html5" checked>
+                                    <input type="radio" class="fa fa-user-tie circle" id="html5" name="fav_language5" value="html5" checked>
+                                    <input type="radio" class="fa fa-user-alt-slash circle" id="html5" name="fav_language5" value="html5" checked>
+                                    <input type="radio" class="circle fa fa-users-cog" id="html5" name="fav_language5" value="html5" checked>
+                                    <input type="radio" class="circle fa fa-user-friends " id="html5" name="fav_language5" value="html5" ></td>
+                                 
+                                </tr>
+                                <tr>
+                                  <td><input type="checkbox">&nbsp; First Name</td>
+                                  <td><input type="radio" class="fa fa-users circle" id="html6" name="fav_language6" value="html6" checked>
+                                    <input type="radio" class="fa fa-user-tie circle" id="html6" name="fav_language6" value="html6" checked>
+                                    <input type="radio" class="fa fa-user-alt-slash circle" id="html6" name="fav_language6" value="html6" checked>
+                                    <input type="radio" class="circle fa fa-users-cog" id="html6" name="fav_language6" value="html6" checked>
+                                    <input type="radio" class="circle fa fa-user-friends " id="html6" name="fav_language6" value="html6" ></td>
+
+                                  <td> <input type="radio" class="fa fa-users circle" id="html7" name="fav_language7" value="html7" checked>
+                                    <input type="radio" class="fa fa-user-tie circle" id="html7" name="fav_language7" value="html7" checked>
+                                    <input type="radio" class="fa fa-user-alt-slash circle" id="html7" name="fav_language7" value="html7" checked>
+                                    <input type="radio" class="circle fa fa-users-cog" id="html7" name="fav_language7" value="html7" checked>
+                                    <input type="radio" class="circle fa fa-user-friends " id="html7" name="fav_language7" value="html7" ></td>
+                                  
+                                </tr>
+                                <tr>
+                                  <td><input type="checkbox">&nbsp; Last Name</td>
+                                  <td><input type="radio" class="fa fa-users circle" id="html8" name="fav_language8" value="html8" checked>
+                                    <input type="radio" class="fa fa-user-tie circle" id="html8" name="fav_language8" value="html8" checked>
+                                    <input type="radio" class="fa fa-user-alt-slash circle" id="html8" name="fav_language8" value="html8" checked>
+                                    <input type="radio" class="circle fa fa-users-cog" id="html8" name="fav_language8" value="html8" checked>
+                                    <input type="radio" class="circle fa fa-user-friends " id="html8" name="fav_language8" value="html8" ></td>
+
+                                  <td> <input type="radio" class="fa fa-users circle" id="html9" name="fav_language9" value="html9" checked>
+                                    <input type="radio" class="fa fa-user-tie circle" id="html9" name="fav_language9" value="html9" checked>
+                                    <input type="radio" class="fa fa-user-alt-slash circle" id="html9" name="fav_language9" value="html9" checked>
+                                    <input type="radio" class="circle fa fa-users-cog" id="html9" name="fav_language9" value="html9" checked>
+                                    <input type="radio" class="circle fa fa-user-friends " id="html9" name="fav_language9" value="html9" ></td>
+                                 
+                                </tr>
+                                <tr>
+                                  <td><input type="checkbox">&nbsp; Email Address</td>
+                                  <td> <input type="radio" class="fa fa-users circle" id="html10" name="fav_language10" value="html10" checked>
+                                    <input type="radio" class="fa fa-user-tie circle" id="html10" name="fav_language10" value="html10" checked>
+                                    <input type="radio" class="fa fa-user-alt-slash circle" id="html10" name="fav_language10" value="html10" checked>
+                                    <input type="radio" class="circle fa fa-users-cog" id="html10" name="fav_language10" value="html10" checked>
+                                    <input type="radio" class="circle fa fa-user-friends " id="html10" name="fav_language10" value="htm10" ></td>
+                                  <td> <input type="radio" class="fa fa-users circle" id="html11" name="fav_language11" value="html11" checked>
+                                    <input type="radio" class="fa fa-user-tie circle" id="html11" name="fav_language11" value="html11" checked>
+                                    <input type="radio" class="fa fa-user-alt-slash circle" id="html11" name="fav_language11" value="html11" checked>
+                                    <input type="radio" class="circle fa fa-users-cog" id="html11" name="fav_language11" value="html11" checked>
+                                    <input type="radio" class="circle fa fa-user-friends " id="html11" name="fav_language11" value="html11" ></td>
+                                  
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox">&nbsp; Photo</td>
+                                    <td> <input type="radio" class="fa fa-users circle" id="html12" name="fav_language12" value="html12" checked>
+                                      <input type="radio" class="fa fa-user-tie circle" id="html12" name="fav_language12" value="html12" >
+                                      <input type="radio" class="fa fa-user-alt-slash circle" id="html12" name="fav_language12" value="html12" >
+                                      <input type="radio" class="circle fa fa-users-cog" id="html12" name="fav_language12" value="html12" >
+                                      <input type="radio" class="circle fa fa-user-friends " id="html12" name="fav_language12" value="html12"  ></td>
+
+                                    <td> <input type="radio" class="fa fa-users circle" id="html13" name="fav_language13" value="html13" checked>
+                                      <input type="radio" class="fa fa-user-tie circle"  id="html13" name="fav_language13" value="html13">
+                                      <input type="radio" class="fa fa-user-alt-slash circle"  id="html13" name="fav_language13" value="html13">
+                                      <input type="radio" class="circle fa fa-users-cog"  id="html13" name="fav_language13" value="html13">
+                                      <input type="radio" class="circle fa fa-user-friends "  id="html13" name="fav_language13" value="html13" ></td>
+                                   
+                                  </tr>
+                              </table>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <a href="Permissions.html" class="btn border btn-block btn-dark">Cancel</a>
+                  </div>
+                  </div>
+                  <div class="card card-default" >
+                    <div class="card-header">
+                      <h3 class="card-title">
+                        <strong><input type="checkbox">Work Information</strong>
+                      </h3>
+                      <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                          class="fas fa-minus"></i> </button>
+                      </div>
+                    </div>
+                  
+                    <div class="card-body">
+                      <div class="row">
+                       ........
+                      
+                        
+                 </div>
+                </div>
+              </div>
+              <div class="card card-default" >
+                <div class="card-header">
+                  <h3 class="card-title">
+                    <strong><input type="checkbox">Personel Details</strong>
+                  </h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                      class="fas fa-minus"></i> </button>
+                  </div>
+                </div>
+              
+                <div class="card-body">
+                  <div class="row">
+                   
+                  .........
+                    
+             </div>
+            </div>
+          </div>
+          <div class="card card-default" >
+            <div class="card-header">
+              <h3 class="card-title">
+                <strong><input type="checkbox">Contact Details</strong>
+              </h3>
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+                  class="fas fa-minus"></i> </button>
+              </div>
+            </div>
+          
+            <div class="card-body">
+              <div class="row">
+               
+              
+                ........
+         </div>
+        </div>
+      </div>
+      <div class="card card-default" >
+        <div class="card-header">
+          <h3 class="card-title">
+            <strong><input type="checkbox">Department Details</strong>
+          </h3>
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+              class="fas fa-minus"></i> </button>
+          </div>
+        </div>
+      
+        <div class="card-body">
+          <div class="row">
+           
+          ........
+            
+     </div>
+    </div>
+  </div>
+  <div class="card card-default" >
+    <div class="card-header">
+      <h3 class="card-title">
+        <strong><input type="checkbox">Education Details</strong>
+      </h3>
+      <div class="card-tools">
+        <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+          class="fas fa-minus"></i> </button>
+      </div>
+    </div>
+  
+    <div class="card-body">
+      <div class="row">
+       
+      .......
+        
+ </div>
+</div>
+</div>
+<div class="card card-default" >
+    <div class="card-header">
+      <h3 class="card-title">
+        <strong><input type="checkbox">Work Experience</strong>
+      </h3>
+      <div class="card-tools">
+        <button type="button" class="btn btn-tool" data-card-widget="collapse"> <i
+          class="fas fa-minus"></i> </button>
+      </div>
+    </div>
+  
+    <div class="card-body">
+      <div class="row">
+       
+      ........
+        
+ </div>
+</div>
+</div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- start footer code here............... -->
+    <div hrms-include-html="includes/footer.html"></div>
+    <!-- end footer code here............... -->
+  </div>
+  <script src="dist/js/hrms.js"></script>
+  <script src="dist/js/script.js"></script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/js/admin.js"></script>
+  <script src="dist/js/demo.js"></script>
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="plugins/jszip/jszip.min.js"></script>
+  <script src="plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+ 
+<script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("circle");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    </script>
+
+ 
+</body>
+
+</html>
